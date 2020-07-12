@@ -1,0 +1,263 @@
+---
+title: Why I Should check my code's performance?
+date: '2019-07-17'
+template: 'post'
+draft: false
+slug: 'why-i-should-check-my-code-performance'
+category: 'Algorithms'
+tags:
+  - 'Ruby'
+  - 'Algorithms'
+  - 'Performance'
+description: 'I explain we should always check our code's performances as programmer.'
+socialImage: '/media/posts/why-I-should-check-my-code-performance_cover.jpeg'
+---
+
+![Cover Image](/media/posts/why-I-should-check-my-code-performance_cover.jpeg)
+
+> I explain we should always check our code's performances as programmer.
+
+As a **#CodeNewbie,** I usually don't care how I solved a coding challenge as long as I am getting the result (maybe I do care a bit about elegance, cleanness of the codes). Until one day, I saw the differences between my code and my teammates' code:
+
+```bash
+Comparison:
+     Yunus's method :   119030.6 i/s
+     Ebuka's method :    63232.0 i/s - 1.88x  slower
+    Kelvin's method :     6848.0 i/s - 17.38x  slower
+```
+
+I changed my mind since.
+
+Below, I will explore the reasons why I think checking the performance of your code is important, and how we can do it.
+
+## First of all, it is fun.
+
+![Photo by Ilya Pavlov on Unsplash](https://cdn.hashnode.com/res/hashnode/image/upload/v1562237928237/3w0qFYZwF.jpeg)
+_Photo by Ilya Pavlov on Unsplash_
+
+When doing a coding challenge, it is fun to compete with your coding partners to see who can solve the same problem first.
+
+The same logic applies for code performance checking, the differences are, not only you can compete with your coding partners or teammates, but also yourself, and even the team of the ruby contributors.
+
+Below is one example -
+
+- The challenge - return the median of an unsorted array (size of the array is always an odd number).
+
+```ruby
+# get the median by search every number in the array
+
+def median(array)
+  array.each do |x|
+    count = 0
+    array.each {|y| count += 1 if y <= x}
+    return x if count == array.size/2 + 1
+  end
+end
+```
+
+```ruby
+# Use Ruby build-In sort to find the array
+
+def median_r(array)
+  array.sort[array.size/2]
+end
+```
+
+if run above methods in my laptop, I almost can get the same result at the same time. But are the codes really the same? Thanks for the [benchmark tools](https://github.com/evanphx/benchmark-ips) from [Evan Phoenix](https://github.com/evanphx), I can benchmark these 2 blocks of codes from my laptop by just adding a few lines of code.
+
+```ruby
+Benchmark.ips do |x|
+    x.config(:time => 3, :warmup => 2)
+
+    x.report("Kelvin's Method") {median(list)}
+    x.report("Ruby Sort") {median_r(list)}
+
+    x.compare!
+  end
+```
+
+_Please note - All coding block should be in the same file_
+
+The result -
+
+```shell
+# Benchmark test with [7, 3, 9, 8, 2, 1, 5]
+Comparison:
+               Ruby Sort:  1098170.4 i/s
+     Kelvin's Method:   171681.3 i/s - 6.40x  slower
+```
+
+ok, so my method is slower than Ruby build-in method, that is reasonable, I just learn Ruby, I can't compete with the group sophisticate ruby developer. (I will try later !!)
+
+How about my teammates' code?
+
+```shell
+# Benchmark test with [7, 3, 9, 8, 2, 1, 5]
+Comparison:
+           Ruby Sort:  1098147.9 i/s
+      Yunus's Method:   528263.9 i/s - 2.08x  slower
+      Kelvin's Method:   173466.6 i/s - 6.33x  slower
+```
+
+Wow, my teammate's code ran 3 times faster than mine, I want to find out why and how.
+
+Finally, I use my own sorting method (Advance Quick Sort) created another version of find median method.
+
+```ruby
+def median_k1(array)
+  temp = array.clone .    #for not modify the original array
+  advanced_quicksort(temp)
+  temp[array.size/2]
+end
+```
+
+and run the benchmark test again.
+
+```shell
+# Benchmark test with [7, 3, 9, 8, 2, 1, 5]
+Comparison:
+           Ruby Sort:              1087509.0 i/s
+      Yunus's Method:        525471.1 i/s - 2.07x  slower
+     Kelvin's Method:         166969.8 i/s - 6.51x  slower
+Kelvin's Adv Sort Method:    151304.6 i/s - 7.19x  slower
+```
+
+ok, it runs even slower, but it is fun when we have tried and see the result, isn't it? (just like we watching horse racing, but we competing with code but not horse)
+
+Sometime, I will repeat the above processes over and over again until I can't think of any way to improve my code.
+
+I might end up re-write my code or just have deeper understand the code I wrote. The point is, I could write better, faster code later, I enjoy more learning to code, it gives me motivations to move forward.
+
+## Second, It helps me learn how to code at a deeper level.
+
+When doing the coding challenges with my team, we usually wouldn't notice the differences between solutions, therefore, we would never discuss whether one solution is better than the other, because they all give same results.
+
+But with the comparisons, we suddenly have more topics to discuss and competing with, every team member wants to write faster code, then we will learn from each other.
+
+For example, one of my team members tries to study which Ruby enumerable methods are more efficient given the same situation. [His Article](https://medium.com/@YunusAybey/a784d01148f9)
+
+Also, from the sample I mentioned earlier, once I saw the performance of my codes, I have the desires to dig deeper on how and why my code is run slower, even I just try to find a way to beat myself.
+
+Beside comparing codes, actually, there is one more thing we can test - inputs (or DataSet), some code work better with one input but work worse with another. here is some example:
+
+```shell
+# Benchmark test with [7, 3, 9, 8, 2, 1, 5]
+Comparison:
+           Ruby Sort:  1041021.5 i/s
+      Yunus's Method:   500895.3 i/s - 2.08x  slower
+     Kelvin's Method:   165341.8 i/s - 6.30x  slower
+    Kelvin's AdvSort:   141434.0 i/s - 7.36x  slower
+```
+
+The situation is changing with an almost sorted array...
+
+```shell
+# Benchmark test with [0, 1, 2, 4, 6, 5, 3, 8, 9]
+Comparison:
+           Ruby Sort:   926798.7 i/s
+     Kelvin's Method:   253107.0 i/s - 3.66x  slower
+      Yunus's Method:   117203.3 i/s - 7.91x  slower
+    Kelvin's AdvSort:    68769.3 i/s - 13.48x  slower
+```
+
+The table flipped again with a larger dataset ...
+
+```shell
+# Benchmark test with an array with 100 unsorted numbers
+Comparison:
+           Ruby Sort:   108950.9 i/s
+    Kelvin's AdvSort:     4935.3 i/s - 22.08x  slower
+      Yunus's Method:     4794.6 i/s - 22.72x  slower
+     Kelvin's Method:     1216.6 i/s - 89.55x  slower
+```
+
+Interesting, right? After such tests, my team and I wouldn't look at the code the same way as before, we now understand there is no absolute best code, some code work better with one situation, some work better with another situation.
+
+There are many more examples to show how we dig deeper into the code to learn more, the ability to see the performances of our code help us keep doing that.
+
+![Screen Shot 2019-07-17 at 8.05.37 PM.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1563365381068/HWWDA0Sub.png)
+
+I guess that is also why most of the coding challenge platform such as [LeetCode](https://leetcode.com) want to show you the performance after you finish it.
+
+## Finally, I think it will matter at work.
+
+When solving a small problem such as coding challenges, even we can see the difference from a performance test, but that comparison might be just 0.001 seconds vs 0.01 seconds, nobody can really tell and it has very little effect in the real world.
+
+But all it is because coding challenges usually only employ very small dataset to prove the concepts or explain the algorithm easily. The story will be totally different once start uses bigger datasets.
+
+```shell
+# Benchmark with 1,000 size array
+Comparison:
+           Ruby Sort:     6454.5 i/s
+    Kelvin's AdvSort:      336.0 i/s - 19.21x  slower
+      Yunus's Method:       45.5 i/s - 141.97x  slower
+     Kelvin's Method:       20.1 i/s - 321.18x  slower
+```
+
+```shell
+# Benchmark with 10,000 size array
+Comparison:
+           Ruby Sort:      477.6 i/s
+    Kelvin's AdvSort:       27.4 i/s - 17.40x  slower
+      Yunus's Method:        0.7 i/s - 681.21x  slower
+     Kelvin's Method:        0.4 i/s - 1254.91x  slower
+```
+
+The datasets sizes are 1,000 and 10,000 respectively, one of my methods can't even finish in 3 seconds (I pre-set as 3 seconds this benchmark test).
+
+Now I can really feel the difference, it is 5 Seconds. vs 0.005 Seconds, If I put it into my web application, my web app might barely work once my products categories close to 10k.
+
+My first code wouldn't work in a production system like that, my second code (with advance sort method apply) might work better, but still far from the Ruby baseline code. That is the difference between amateur and professional, but I would never know it if I don't do the performance test.
+
+It also reminds me why some programmers being paid 10 or even 100 times salary because they can write more efficient code, help company's website run 1,000 or 100,000 times faster with millions to billions of data.
+
+So if I keep checking the performance of my code, getting to know what works better what works worse, learn the trick along the way of #LeanToCode, I might have chance to become one of those programmers. (always have hope!)
+
+Finally, maybe I am just too optimistic, but check performance or do benchmark testing still a very good practice for either learning code or write code for work, not to mention it makes the journey more fun and interesting, agree?
+
+![rob-wingate-IlUqSRJYp8c-unsplash.jpg](https://cdn.hashnode.com/res/hashnode/image/upload/v1563377756362/-rXkmaIPW.jpeg)
+_Photo by Rob Wingate on Unsplash_
+
+## At the end, I will show you how.
+
+The [benchmark tools](https://github.com/evanphx/benchmark-ips) I use in this article is from [Evan Phoenix](https://github.com/evanphx) for #Ruby languages only. There might be similar tools in other languages as well, you can always find them through google.
+
+First, you need to install the package for ruby.
+
+```bash
+$  gem install benchmark-ips
+```
+
+Second, import it to the file you want to test.
+
+```ruby
+# Find-the-median.rb
+require 'benchmark/ips'
+...
+```
+
+Finally, add benchmark test code at the end of the file.
+
+```ruby
+...
+# all the methods are in the same file.
+# also for all the test datasets.
+Benchmark.ips do |x|
+    x.config(:time => 3, :warmup => 2)
+
+    x.report("Kelvin's Method") {median_k(list)}
+    x.report("Kelvin's AdvSort") {median_k1(list)}
+    x.report("Yunus's Method") {median_y(list)}
+    x.report("Ruby Sort") {median_r(list)}
+
+    x.compare!
+  end
+```
+
+You can find the full set of code [here](https://github.com/kelvin8773/data-algorithm/blob/master/6-sorting-challenges/ex8.7-the-median.rb).
+
+There might be a better way to test, and a different way to test in a production environment, but the point of this article is telling how important performance test is for both our study and work.
+
+I hope this article is helpful for you, I would love to hear any comment and ideas from you, and I wish all of you - **Happy Coding! **
+
+![Banners - editable for students.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1563377954055/MSPLDEppv.png)
