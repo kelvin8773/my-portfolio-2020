@@ -1,16 +1,16 @@
 ---
 title: Humane Typography in the Digital Age
-date: "2017-08-19T22:40:32.169Z"
-template: "post"
+date: '2017-08-19T22:40:32.169Z'
+template: 'post'
 draft: false
-slug: "humane-typography-in-the-digital-age"
-category: "Typography"
+slug: 'humane-typography-in-the-digital-age'
+category: 'Typography'
 tags:
-  - "Design"
-  - "Typography"
-  - "Web Development"
-description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
-socialImage: "/media/42-line-bible.jpg"
+  - 'Design'
+  - 'Typography'
+  - 'Web Development'
+description: 'An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts.'
+socialImage: '/media/42-line-bible.jpg'
 ---
 
 - [The first transition](#the-first-transition)
@@ -69,7 +69,7 @@ We’ve come close to “perfection” in the last five centuries. The letters a
 
 ![type-through-time.jpg](/media/type-through-time.jpg)
 
-_Type through 5 centuries._
+**_Type through 5 centuries._**
 
 We lost a part of ourselves because of this chase after perfection. We forgot about the craftsmanship along the way. And the worst part is that we don’t care. The transition to the digital age made that clear. We choose typefaces like clueless zombies. There’s no meaning in our work. Type sizes, leading, margins… It’s all just a few clicks or lines of code. The message isn’t important anymore. There’s no more “why” behind the “what”.
 
@@ -78,23 +78,23 @@ We lost a part of ourselves because of this chase after perfection. We forgot ab
 Human beings aren’t perfect. Perfection is something that will always elude us. There will always be a small part of humanity in everything we do. No matter how small that part, we should make sure that it transcends the limits of the medium. We have to think about the message first. What typeface should we use and why? Does the typeface match the message and what we want to communicate with it? What will be the leading and why? Will there be more typefaces in our design? On what ground will they be combined? What makes our design unique and why? This is the part of humanity that is left in typography. It might be the last part. Are we really going to give it up?
 
 ```jsx
-import React from "react";
-import { render, screen } from "@testing-library/react";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
 
-import App from "./App";
+import App from './App';
 
-describe("App", () => {
-  test("renders App component", () => {
+describe('App', () => {
+  test('renders App component', () => {
     render(<App />);
 
     // implicit assertion
     // because getByText would throw error
     // if element wouldn't be there
-    screen.getByText("Search:");
+    screen.getByText('Search:');
 
     // explicit assertion
     // recommended
-    expect(screen.getByText("Search:")).toBeInTheDocument();
+    expect(screen.getByText('Search:')).toBeInTheDocument();
   });
 });
 ```

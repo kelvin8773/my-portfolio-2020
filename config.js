@@ -12,15 +12,15 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'My Writting',
+      label: 'Writting',
       path: '/'
     },
     {
-      label: 'My Projects',
+      label: 'Projects',
       path: '/pages/projects'
     },
     {
-      label: 'My Notes ~>',
+      label: 'Notes ~>',
       path: 'https://notes.kelvinliang.cn/'
     },
     {
@@ -31,8 +31,7 @@ module.exports = {
   author: {
     name: 'Kelvin Liang',
     photo: '/Kelvin-2020.jpg',
-    bio:
-      'Self-taught Front End Developer from the world of sysAdmin, I like to surrounded by computers, gigs, great ideas, and families.',
+    bio: 'React Front End Developer/ Marathon Runner / Father',
     contacts: {
       email: 'kelvinliang@yandex.com',
       facebook: '',
