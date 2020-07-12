@@ -1,7 +1,7 @@
 ---
 title: 'My Recent Projects'
 template: 'page'
-socialImage: '/media/image-4.jpg'
+socialImage: '/media/hz_riverside_day.jpg'
 ---
 
 This is project page.

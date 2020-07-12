@@ -17,7 +17,7 @@ socialImage: '/media/posts/integrate-bootstrap-4-and-fontawesome-5-in-rails-6_co
 
 > A How to Guide to teach you how to integrate Bootstrap 4 and Font Awesome 5 into Rails 6.
 
-Rails 6 is out for few months now, I happen needed to do a project with it. But I found I can't use the same way to integrate Bootstrap 4 & Font Awesome 5 in Rails 5 in my new project. Because in Rails 6, it start to use [webpack](https://github.com/rails/rails/pull/33079?ref=hackernoon.com) as default Javascript complier.
+[**Rails 6**](https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/) is out for few months now, I happen needed to do a project with it. But I found I can't use the same way to integrate [**Bootstrap 4**](https://getbootstrap.com/) & [**Font Awesome 5**](https://fontawesome.com/) in Rails 5 in my new project. Because in Rails 6, it start to use [webpack](https://github.com/rails/rails/pull/33079) as default Javascript complier.
 
 I try to "Google" it, but nothing valid come back. I did try with some instructions from medium or Stack Overflow, none of them are working.
 
@@ -29,7 +29,7 @@ First, Javascripts is move from `app/assets/javascript` to `app/javascript`.
 
 Second, the path refer Javascripts in `application.html.erb` have change from `javascript_include_tag` to `javascript_pack_tag`.
 
-PS: behind the scene, it is because in [Rails 6](https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/?ref=hackernoon.com), they start to use webpack as default javascript compile engine.
+PS: behind the scene, it is because in [Rails 6](https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/), they start to use webpack as default javascript compile engine.
 
 ## What I should do ?
 
