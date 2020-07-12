@@ -20,7 +20,7 @@ Hi, I am Kelvin Liang from China, a **Front-End Engineer** who specializes in de
 
 ---
 
-<figure class="center" style="width: 400px">
+<figure class="center">
 	<img src="/media/Kelvin_Dextra_Team.jpg" alt="Team of Dextra 2016">
 	<figcaption>Global Dextra IT Team</figcaption>
 </figure>
@@ -36,7 +36,7 @@ Few years ago, I also graduated as a MBA student from [California State Universi
 
 In my leisure time, I love to read history books, cook for my family and go for running in the beautiful city - [Huizhou](https://en.wikipedia.org/wiki/Huizhou).
 
-<figure class="center" style="width: 600px">
+<figure class="center" >
 	<img src="/media/Kelvin_Huizhou_local_runners.jpg" alt="Huizhou Local Running Team">
 	<figcaption>I joined local running community for marathon running.</figcaption>
 </figure>

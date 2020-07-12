@@ -138,7 +138,7 @@ blockquote {
 
 figure {
   display: block;
-  width: 100%;
+  // width: 100%;
   height: auto;
 }
 
@@ -177,17 +177,19 @@ figcaption {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 60%;
   }
 }
 
 .tech-icons {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
 
   .tech-icon {
-    width: 60px;
-    margin-right: 10px;
+    width: 50px;
+    margin-top: 20px;
+    margin-right: 20px;
   }
 }
