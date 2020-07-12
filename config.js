@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://kelvinling.cn',
   pathPrefix: '/',
-  title: 'Kelvin Liang',
+  title: 'Kelvin Liang | React Front-End Developer',
   subtitle: 'Self-taught Front End Developer from the world of sysAdmin.',
   copyright: '© All rights reserved by Kelvin.',
   disqusShortname: '',

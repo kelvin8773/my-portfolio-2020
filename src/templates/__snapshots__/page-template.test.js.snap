@@ -19,12 +19,12 @@ exports[`PageTemplate renders correctly 1`] = `
           <img
             alt="Test name"
             className="author__photo"
-            height="75"
+            height="95"
             src="/test.jpg"
-            width="75"
+            width="95"
           />
         </a>
-        <h2
+        <h1
           className="author__title"
         >
           <a
@@ -33,7 +33,7 @@ exports[`PageTemplate renders correctly 1`] = `
           >
             Test name
           </a>
-        </h2>
+        </h1>
         <p
           className="author__subtitle"
         >

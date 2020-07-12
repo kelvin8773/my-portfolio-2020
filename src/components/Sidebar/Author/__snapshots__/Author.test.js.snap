@@ -10,12 +10,12 @@ exports[`Author renders correctly 1`] = `
     <img
       alt="test"
       className="author__photo"
-      height="75"
+      height="95"
       src="/photo.jpg"
-      width="75"
+      width="95"
     />
   </a>
-  <h2
+  <h1
     className="author__title"
   >
     <a
@@ -24,7 +24,7 @@ exports[`Author renders correctly 1`] = `
     >
       test
     </a>
-  </h2>
+  </h1>
   <p
     className="author__subtitle"
   >
