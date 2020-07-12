@@ -1,0 +1,199 @@
+---
+title: Integrate Bootstrap 4 and Font Awesome 5 in Rails 6
+date: '2019-10-20'
+template: 'post'
+draft: false
+slug: 'integrate-bootstrap-4-and-fontawesome-5-in-rails-6'
+category: 'Web Development'
+tags:
+  - 'Ruby'
+  - 'Ruby on Rails'
+  - 'Web Development'
+description: 'A How to Guide to teach you how to integrate Bootstrap 4 and Font Awesome 5 into Rails 6.'
+socialImage: '/media/posts/integrate-bootstrap-4-and-fontawesome-5-in-rails-6_cover.png'
+---
+
+![Cover Image](/media/posts/integrate-bootstrap-4-and-fontawesome-5-in-rails-6_cover.png)
+
+> A How to Guide to teach you how to integrate Bootstrap 4 and Font Awesome 5 into Rails 6.
+
+Rails 6 is out for few months now, I happen needed to do a project with it. But I found I can't use the same way to integrate Bootstrap 4 & Font Awesome 5 in Rails 5 in my new project. Because in Rails 6, it start to use [webpack](https://github.com/rails/rails/pull/33079?ref=hackernoon.com) as default Javascript complier.
+
+I try to "Google" it, but nothing valid come back. I did try with some instructions from medium or Stack Overflow, none of them are working.
+
+After some trials and errors, I finally find a way to make them work together, let me share it in here, hope it can help you!
+
+## So what is changed?
+
+First, Javascripts is move from `app/assets/javascript` to `app/javascript`.
+
+Second, the path refer Javascripts in `application.html.erb` have change from `javascript_include_tag` to `javascript_pack_tag`.
+
+PS: behind the scene, it is because in [Rails 6](https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/?ref=hackernoon.com), they start to use webpack as default javascript compile engine.
+
+## What I should do ?
+
+- Add bootstrap into rails.
+
+First, integrate Bootstrap (Base on Bootstrap docs) use rails' way.
+
+Add following line in to your `Gemfile`.
+
+```gem
+# Gemfile
+gem 'bootstrap',  '~>4.3.1'
+```
+
+after save, run bundle install to update the gem library.
+
+At this point, you might find your web page font has been changed and maybe some bootstrap class is working.
+
+However, if you want all functionalities work in bootstrap 4, you might need to integrate **jquery**, and **popper.js**. But here is what not working by referring the docs from bootstrap.
+
+Beside, by default, Rails is still use the `application.scss` from `app/assets/stylesheets`, which is not utilize the power of `webpack`.
+
+So if you want to integrate Sass with webpack as well, you can follow steps below. Otherwise, you can skip them and move on to next section.
+
+- Move sass to webpack
+
+First, create following folder `app/javascript/stylesheets/`, create `application.scss` file under this folder and insert following line.
+
+```css
+// app/javascript/stylesheets/application.scss
+
+@import 'bootstrap';
+```
+
+Second, change the reference link in `application.html.erb` file from `stylesheet_link_tag` to `stylesheet_pack_tag`.
+
+```html
+<%# app/views/layouts/application.html.erb %> <%= stylesheet_pack_tag
+'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+```
+
+But the sass wouldn't work just yet, let's move on next part.
+
+![yarn image](https://hackernoon.com/photos/qggWKTQRL1MKDrjhFkHv4BCtod43-1be093xux)
+
+- Use yarn add bootstrap, jquery, popper.js.
+
+It is recommended by most the sources I can found, so I think it is better follow their advices now. run following line in your terminal.
+
+```bash
+yarn add bootstrap jquery popper.js
+```
+
+After yarn install the packages correctly, update config file of webpack as following.
+
+```js
+// config/webpack/environment.js
+const { environment } = require('@rails/webpacker');
+const webpack = require('webpack');
+environment.plugins.append(
+  'Provide',
+  new webpack.ProvidePlugin({
+    $: 'jquery',
+    jQuery: 'jquery',
+    Popper: ['popper.js', 'default']
+  })
+);
+module.exports = environment;
+```
+
+Next,  update your `application.js` file by adding following lines.
+
+```js
+// app/javascript/packs/application.js
+
+import 'bootstrap';
+import '../stylesheets/application';
+```
+
+After updating, the app/javascript folder structure should something like following.
+
+![app folder structure](https://hackernoon.com/photos/qggWKTQRL1MKDrjhFkHv4BCtod43-tk7sn3xl3)
+
+By now, bootstrap 4 should be fully integrated, test it out with your project.
+
+- Final touch for Bootstrap
+
+There are some components require adding custom javascript code into your project, such as [tooltip](https://getbootstrap.com/docs/4.3/components/tooltips), [modal](https://getbootstrap.com/docs/4.3/components/modal/) or [popovers](https://getbootstrap.com/docs/4.3/components/popovers/). So the best way add those code in `custom.js`(or any name your want) file, and import it into `application.js`, such as following:
+
+```js
+//custom.js
+$(function() {
+  $('[data-toggle="tooltip"]').tooltip();
+});
+
+$(function() {
+  $('[data-toggle="popover"]').popover();
+});
+```
+
+```js
+//application.js
+import './custom';
+```
+
+Finally, refresh the page or restart the Rails server if you can't see the changes.
+
+![Font Awesome 5 Image](https://hackernoon.com/photos/qggWKTQRL1MKDrjhFkHv4BCtod43-559tl3xby)
+
+Now let's move on to Integrate [Font Awesome 5](https://fontawesome.com/) (there are actually gem for it, such as [this](https://github.com/bokmann/font-awesome-rails?ref=hackernoon.com), or [this](https://github.com/tomkra/font_awesome5_rails?ref=hackernoon.com), but they are either still use Font Awesome 4 or it is not working by following their docs).
+
+First, use `yarn` add latest Font Awesome library into your project.
+
+```bash
+yarn add @fortawesome/fontawesome-free
+```
+
+Second, add following line in both `application.scss` & `application.js` files.
+
+```js
+// app/javascript/stylesheets/application.scss
+
+@import '@fortawesome/fontawesome-free';
+```
+
+```js
+// app/javascript/packs/application.js
+
+import '@fortawesome/fontawesome-free/js/all';
+```
+
+So by now, Font Awesome 5 should be integrated into your project, you can integrate the icon by inserting code like following:
+
+```html
+<i class="fab fa-facebook-f fa-3x mx-2"></i>
+```
+
+## One more thing ...
+
+if you want to integrate Font Awesome into your rails erb code, you might still need add following gem into your project.
+
+```gem
+# Gemfile
+
+gem 'font_awesome5_rails'
+```
+
+So now you can start using ruby code like following to decorate your web page.
+
+```erb
+<%= fa_icon "baby", text: "BB", class: 'mx-2', size: '3x' %>
+```
+
+Now you are done.
+
+![Final Image](https://hackernoon.com/photos/qggWKTQRL1MKDrjhFkHv4BCtod43-nee273x8k)
+Photo by Radu Florin on Unsplash
+
+## Final words ...
+
+Due to I still fresh in the web development world, there might be better way to do it, please do let me know, thanks!
+
+As you can see, you need to both install gem and javascript package to make them works, I hope later gems package can fix this to make our life easier.
+
+You can reference my sample HTML code [here](https://github.com/kelvin8773/integration-example/blob/master/app/views/page/index.html.erb?ref=hackernoon.com).
+
+_This article original posted in [hackernoon](https://hackernoon.com/integrate-bootstrap-4-and-font-awesome-5-in-rails-6-u87u32zd)_

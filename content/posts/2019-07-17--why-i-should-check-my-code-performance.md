@@ -9,13 +9,13 @@ tags:
   - 'Ruby'
   - 'Algorithms'
   - 'Performance'
-description: 'I explain we should always check our code's performances as programmer.'
-socialImage: '/media/posts/why-I-should-check-my-code-performance_cover.jpeg'
+description: 'I explain why we should always check performances of our codes as programmer.'
+socialImage: '/media/posts/why-check-my-code-performance_cover.jpg'
 ---
 
-![Cover Image](/media/posts/why-I-should-check-my-code-performance_cover.jpeg)
+![Cover Image](/media/posts/why-check-my-code-performance_cover.jpg)
 
-> I explain we should always check our code's performances as programmer.
+> I explain why we should always check performances of our codes as programmer.
 
 As a **#CodeNewbie,** I usually don't care how I solved a coding challenge as long as I am getting the result (maybe I do care a bit about elegance, cleanness of the codes). Until one day, I saw the differences between my code and my teammates' code:
 
@@ -258,6 +258,4 @@ You can find the full set of code [here](https://github.com/kelvin8773/data-algo
 
 There might be a better way to test, and a different way to test in a production environment, but the point of this article is telling how important performance test is for both our study and work.
 
-I hope this article is helpful for you, I would love to hear any comment and ideas from you, and I wish all of you - **Happy Coding! **
-
-![Banners - editable for students.png](https://cdn.hashnode.com/res/hashnode/image/upload/v1563377954055/MSPLDEppv.png)
+I hope this article is helpful for you, I would love to hear any comment and ideas from you, and I wish all of you - **Happy Coding!**
