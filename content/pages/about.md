@@ -25,14 +25,14 @@ Hi, I am Kelvin Liang from China, a **Front-End Engineer** who specializes in de
 	<figcaption>Global Dextra IT Team</figcaption>
 </figure>
 
-Before I switched my career to web development, I worked as a system administrator, project manager, office admin manager and IT manager for an [international company](https://www.dextragroup.com/) in the southern part of China. (In city of [Guangzhou](https://en.wikipedia.org/wiki/Guangzhou) & [Hong Kong](https://en.wikipedia.org/wiki/Hongkong)) for decades.
+Before I switched my career to web development, I worked as a system administrator, project manager, office admin manager and IT manager for an [international company](https://www.dextragroup.com/) in the southern part of China. (In city of [Guangzhou](https://en.wikipedia.org/wiki/Guangzhou) & [Hong Kong](https://en.wikipedia.org/wiki/Hongkong)). In past decade, I implemented over hundred IT projects across the global from ERP system to warehouse network setup, I have gained tremendous experiences on [IT Service management](https://en.wikipedia.org/wiki/IT_service_management), System & Network administration and Project Management.
 
 <figure class="float-right" style="width: 240px">
 	<img src="/media/kelvin-cfa-team.jpg" alt="Team of CFA in San Francisco">
 	<figcaption>Team of CFA Equity Research in San Francisco.</figcaption>
 </figure>
 
-Few years ago, I graduated as a MBA student from [California State University East Bay](https://www.csueastbay.edu/), where I studied the financial models of tech startups and big-name companies in the United States for 4 years. In other words, I know how things work in the tech field, and I’m excited about continuing my career in tech industry to help startups or small businesses owners transform their ideas into reality.
+Few years ago, I also graduated as a MBA student from [California State University East Bay](https://www.csueastbay.edu/), where I studied the financial models of tech startups and big-name companies in the United States for 4 years. In other words, I know how things work in the tech field, and I’m excited about continuing my career in tech industry to help startups or small businesses owners transform their ideas into reality.
 
 In my leisure time, I love to read history books, cook for my family and go for running in the beautiful city - [Huizhou](https://en.wikipedia.org/wiki/Huizhou).
 
