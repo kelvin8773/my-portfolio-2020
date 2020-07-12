@@ -1,7 +1,9 @@
 ---
-title: 'My Recent Projects'
+title: 'Recent Projects'
 template: 'page'
 socialImage: '/media/hz_riverside_day.jpg'
 ---
 
-This is project page.
+![Beautiful Huizhou City](/media/hz_riverside_day.jpg)
+
+## Project List

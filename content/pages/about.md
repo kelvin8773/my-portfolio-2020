@@ -4,7 +4,7 @@ template: 'page'
 socialImage: '/media/Kelvin-2020-work-from-home.jpg'
 ---
 
-![Huizhou City River Side Day View - 2020-07-10](/media/Kelvin-2020-work-from-home.jpg)
+![Kelvin Work From Home- 2020-07-10](/media/Kelvin-2020-work-from-home.jpg)
 
 Hi, I am Kelvin Liang from China, a **Front-End Engineer** who specializes in developing **React** web applications, I would love to help you to build **beautiful** and **smooth** websites. I excel in working hard and smart to bring **high quality** and **high satisfaction** outcome for my clients.
 
