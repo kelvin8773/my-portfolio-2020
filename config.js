@@ -7,7 +7,7 @@ module.exports = {
   subtitle: 'Self-taught Front End Developer from the world of sysAdmin.',
   copyright: '© All rights reserved by Kelvin.',
   disqusShortname: 'kelvin-portfolio-2020',
-  postsPerPage: 3,
+  postsPerPage: 4,
   googleAnalyticsId: 'UA-157502662-2',
   useKatex: false,
   menu: [
@@ -18,10 +18,6 @@ module.exports = {
     {
       label: 'Projects',
       path: '/pages/projects'
-    },
-    {
-      label: 'Notes ~>',
-      path: 'https://notes.kelvinliang.cn/'
     },
     {
       label: 'About me',

@@ -7,7 +7,7 @@ const autoprefixer = require('autoprefixer');
 module.exports = [
   lost(),
   pxtorem({
-    rootValue: 15,
+    rootValue: 16,
     unitPrecision: 5,
     propList: [
       'font',
