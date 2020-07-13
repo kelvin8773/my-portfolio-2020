@@ -20,6 +20,8 @@ Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who love to build **
 
 <h1 align="center">A little background</h1>
 
+## Before ...
+
 <figure class="center">
 	<img src="/media/Kelvin_Dextra_Team.jpg" alt="Team of Dextra 2016">
 	<figcaption>Global Dextra IT Team</figcaption>
@@ -37,7 +39,7 @@ Few years ago, I also attended a MBA program in [California State University Eas
 
 Finally, I decided to quit my job to dive deep into the world of coding. I attended [Microverse](https://www.microverse.org/), an online coding school, to master every aspect of skills that professional programmers need in their daily lives, from the technical skills (Ruby on Rails / React / JavaScript / HTML / CSS ) to the soft skills (Pair Programming / Remote Working / Team Collaboration / Mentoring).
 
-## Now
+## Now ...
 
 Now, I can comfortably build solutions based on ideas, solve business puzzles, and give professional advice with my business acumen and coding knowledge. I love to help businesses grow with coding so that people can focus on creating beautiful things for society instead of simply working on repetitive tasks.
 
