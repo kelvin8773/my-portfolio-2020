@@ -6,7 +6,7 @@ module.exports = {
   title: 'Kelvin Liang | React Front-End Developer',
   subtitle: 'Self-taught Front End Developer from the world of sysAdmin.',
   copyright: '© All rights reserved by Kelvin.',
-  disqusShortname: '',
+  disqusShortname: 'kelvin-portfolio-2020',
   postsPerPage: 3,
   googleAnalyticsId: 'UA-157502662-2',
   useKatex: false,

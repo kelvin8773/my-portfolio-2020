@@ -39,7 +39,7 @@ First, integrate Bootstrap (Base on Bootstrap docs) use rails' way.
 
 Add following line in to your `Gemfile`.
 
-```gem
+```ruby
 # Gemfile
 gem 'bootstrap',  '~>4.3.1'
 ```
@@ -171,7 +171,7 @@ So by now, Font Awesome 5 should be integrated into your project, you can integr
 
 if you want to integrate Font Awesome into your rails erb code, you might still need add following gem into your project.
 
-```gem
+```ruby
 # Gemfile
 
 gem 'font_awesome5_rails'

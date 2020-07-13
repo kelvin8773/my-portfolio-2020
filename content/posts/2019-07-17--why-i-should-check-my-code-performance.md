@@ -1,5 +1,5 @@
 ---
-title: Why I Should check my code's performance?
+title: Why I should check my code's performance?
 date: '2019-07-17'
 template: 'post'
 draft: false
