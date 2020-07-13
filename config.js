@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://kelvinling.cn',
   pathPrefix: '/',
-  title: 'Kelvin Liang | React Front-End Developer',
+  title: 'Kelvin Liang | Full Stack Web Developer',
   subtitle: 'Self-taught Front End Developer from the world of sysAdmin.',
   copyright: '© All rights reserved by Kelvin.',
   disqusShortname: 'kelvin-portfolio-2020',
@@ -27,7 +27,7 @@ module.exports = {
   author: {
     name: 'Kelvin Liang',
     photo: '/Kelvin-2020.jpg',
-    bio: 'React Front End Developer/ Marathon Runner / Father',
+    bio: 'Full Stack Web Developer/ Marathon Runner / Father',
     contacts: {
       email: 'kelvinliang@yandex.com',
       facebook: '',
