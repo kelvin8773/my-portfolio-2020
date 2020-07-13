@@ -6,7 +6,7 @@ socialImage: '/media/Kelvin-2020-work-from-home.jpg'
 
 ![Kelvin Work From Home- 2020-07-10](/media/Kelvin-2020-work-from-home.jpg)
 
-Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who love to build **beautiful** and **smooth** websites to solve complex business problem. I am excel in working hard and smart to bring **high quality** and **high satisfaction** outcome for my clients.
+Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who loves to build **beautiful** and **smooth** websites to solve complex business problems. I excel in working hard and smart to bring **high quality** and **high satisfaction** outcome for my clients.
 
 <div class="tech-icons">
   <img class="tech-icon" src="/media/logos/reactjs_logo.svg" alt="React.js">
