@@ -51,8 +51,17 @@ const createPages = async ({ graphql, actions }) => {
 
   _.each(edges, (edge) => {
     if (_.get(edge, 'node.frontmatter.template') === 'page') {
+      // --------- To Remove Later
       createPage({
         path: edge.node.fields.slug,
+        component: path.resolve('./src/templates/page-template.js'),
+        context: { slug: edge.node.fields.slug }
+      });
+      // ----------
+
+      const pagePath = edge.node.fields.slug.replace('/pages', '');
+      createPage({
+        path: pagePath,
         component: path.resolve('./src/templates/page-template.js'),
         context: { slug: edge.node.fields.slug }
       });

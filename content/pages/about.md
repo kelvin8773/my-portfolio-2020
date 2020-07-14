@@ -29,7 +29,6 @@ Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who loves to build *
 
 After decades at a [multi-national company](https://www.dextragroup.com/) where I inhabited multiple roles (I mostly work in southern part of China - cities of [Guangzhou](https://en.wikipedia.org/wiki/Guangzhou) & [Hong Kong](https://en.wikipedia.org/wiki/Hongkong)), I realized that programming had the potential to greatly improve business performance in nearly every scenario. In one of my recent projects, I designed a payroll software to help reduce manual workload and boost the performance of assembly line workers. The scripts that I wrote ran daily to collect info from end-users’ computers in order to help simplify IT staff procedures and improve user satisfaction. I envisioned that professionals with programming capabilities will play bigger roles in every business in the coming decade. 
 
-
 <figure class="float-right" style="width: 240px">
 	<img src="/media/kelvin-cfa-team.jpg" alt="Team of CFA in San Francisco">
 	<figcaption>Team of CFA Equity Research in San Francisco.</figcaption>
