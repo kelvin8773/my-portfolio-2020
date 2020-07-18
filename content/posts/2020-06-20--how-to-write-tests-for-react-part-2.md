@@ -30,13 +30,13 @@ Front-end development is all about visualization and interacting with end-users,
 
 Writing **Accessibility Test** for every aspect of your app seems very intimidated, but thanks for [Deque Systems](https://www.deque.com/company/) - A company dedicated on improving software accessibility by offering [Axe](https://blog.kelvinliang.cn/www.deque.com/axe/) testing package freely available online, we can now easily leverage the expertise from many senior developers around the world by importing [Jest-axe](https://www.npmjs.com/package/jest-axe) along with Jest Library to test a web app's accessibility.
 
-```javascript
+```bash
 npm install --save-dev jest-axe
 ```
 
 or
 
-```javascript
+```bash
 yarn add --dev jest-axe
 ```
 
@@ -53,7 +53,7 @@ expect.extend(toHaveNoViolations);
 describe('App', () => {
   test('should have no accessibility violations', async () => {
     const { container } = render(<App />);
-    const results = await axe(container);
+    const results = await axe(container); //highlight-line
     expect(results).toHaveNoViolations();
   });
 });

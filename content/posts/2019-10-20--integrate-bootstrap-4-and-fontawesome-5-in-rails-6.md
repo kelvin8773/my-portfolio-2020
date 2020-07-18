@@ -60,13 +60,12 @@ First, create following folder `app/javascript/stylesheets/`, create `applicatio
 
 ```css
 // app/javascript/stylesheets/application.scss
-
 @import 'bootstrap';
 ```
 
 Second, change the reference link in `application.html.erb` file from `stylesheet_link_tag` to `stylesheet_pack_tag`.
 
-```html
+```
 <%# app/views/layouts/application.html.erb %> <%= stylesheet_pack_tag
 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 ```
@@ -85,7 +84,7 @@ yarn add bootstrap jquery popper.js
 
 After yarn install the packages correctly, update config file of webpack as following.
 
-```js
+```javascript
 // config/webpack/environment.js
 const { environment } = require('@rails/webpacker');
 const webpack = require('webpack');
@@ -102,9 +101,8 @@ module.exports = environment;
 
 Next,  update your `application.js` file by adding following lines.
 
-```js
+```javascript
 // app/javascript/packs/application.js
-
 import 'bootstrap';
 import '../stylesheets/application';
 ```
@@ -119,10 +117,10 @@ By now, bootstrap 4 should be fully integrated, test it out with your project.
 
 There are some components require adding custom javascript code into your project, such as [tooltip](https://getbootstrap.com/docs/4.3/components/tooltips), [modal](https://getbootstrap.com/docs/4.3/components/modal/) or [popovers](https://getbootstrap.com/docs/4.3/components/popovers/). So the best way add those code in `custom.js`(or any name your want) file, and import it into `application.js`, such as following:
 
-```js
+```javascript
 //custom.js
 $(function() {
-  $('[data-toggle="tooltip"]').tooltip();
+  $('[data-toggle="tooltip"]').tooltip(); //highlight-line
 });
 
 $(function() {
@@ -130,7 +128,7 @@ $(function() {
 });
 ```
 
-```js
+```javascript
 //application.js
 import './custom';
 ```
@@ -149,15 +147,13 @@ yarn add @fortawesome/fontawesome-free
 
 Second, add following line in both `application.scss` & `application.js` files.
 
-```js
+```javascript
 // app/javascript/stylesheets/application.scss
-
 @import '@fortawesome/fontawesome-free';
 ```
 
-```js
+```javascript
 // app/javascript/packs/application.js
-
 import '@fortawesome/fontawesome-free/js/all';
 ```
 
@@ -173,13 +169,13 @@ if you want to integrate Font Awesome into your rails erb code, you might still 
 
 ```ruby
 # Gemfile
-
 gem 'font_awesome5_rails'
 ```
 
 So now you can start using ruby code like following to decorate your web page.
 
-```erb
+```ruby
+# page.erb
 <%= fa_icon "baby", text: "BB", class: 'mx-2', size: '3x' %>
 ```
 

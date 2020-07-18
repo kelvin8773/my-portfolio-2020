@@ -103,6 +103,20 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
+          {
+            resolve: 'gatsby-remark-highlight-code',
+            options: {
+              terminal: 'carbon',
+              theme: 'dracula',
+              lineNumbers: true
+            }
+          },
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              showLineNumbers: true
+            }
+          },
           'gatsby-remark-relative-images',
           {
             resolve: 'gatsby-remark-katex',
@@ -123,7 +137,6 @@ module.exports = {
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' }
           },
           'gatsby-remark-autolink-headers',
-          'gatsby-remark-prismjs',
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
           'gatsby-remark-external-links'
@@ -132,13 +145,13 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
-    'gatsby-plugin-netlify',
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/index.js`
-      }
-    },
+    // 'gatsby-plugin-netlify',
+    // {
+    //   resolve: 'gatsby-plugin-netlify-cms',
+    //   options: {
+    //     modulePath: `${__dirname}/src/cms/index.js`
+    //   }
+    // },
     {
       resolve: 'gatsby-plugin-google-gtag',
       options: {
