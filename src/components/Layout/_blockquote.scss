@@ -1,0 +1,52 @@
+blockquote {
+  border: 0 solid $dark-coal;
+  display: block;
+  background: $white;
+  padding: 50px 50px 25px 50px;
+  margin: 0 0 20px;
+  position: relative;
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: $dark-orange;
+  text-align: justify;
+  border-left: 8px solid $dark-coal;
+  -moz-box-shadow: 2px 2px 15px $shadow;
+  -webkit-box-shadow: 2px 2px 15px $shadow;
+  box-shadow: 2px 2px 15px $shadow;
+}
+
+blockquote::before {
+  content: '“';
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: $yellow;
+  position: absolute;
+  left: 10px;
+  top: 5px;
+}
+
+blockquote::after {
+  content: '';
+}
+
+blockquote a {
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0 3px;
+  color: $green;
+}
+
+blockquote a:hover {
+  color: $orange;
+}
+
+blockquote em {
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0 0 0 10px;
+}

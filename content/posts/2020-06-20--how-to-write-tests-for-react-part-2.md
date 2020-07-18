@@ -314,7 +314,7 @@ const setup = (component) => (
 ...
 ```
 
-> **Please Note:**
+### **Please Note ---**
 
 ```js
 jest.mock('../helpers/getNews');
@@ -367,7 +367,7 @@ test('load news from api correctly', async () => {
 ...
 ```
 
-> **Please Note**
+### **Please Note ---**
 
 ```js
 expect(getNews).toHaveBeenCalledTimes(1);
