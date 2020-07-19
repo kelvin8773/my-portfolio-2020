@@ -15,7 +15,7 @@ exports[`Author renders correctly 1`] = `
       width="95"
     />
   </a>
-  <h1
+  <h3
     className="author__title"
   >
     <a
@@ -24,7 +24,7 @@ exports[`Author renders correctly 1`] = `
     >
       test
     </a>
-  </h1>
+  </h3>
   <p
     className="author__subtitle"
   >

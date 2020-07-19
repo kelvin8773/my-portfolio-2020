@@ -14,7 +14,7 @@ exports[`IndexTemplate renders correctly 1`] = `
         className="author"
       >
         <a
-          href="/pages/about"
+          href="/about"
         >
           <img
             alt="Test name"
@@ -24,16 +24,16 @@ exports[`IndexTemplate renders correctly 1`] = `
             width="95"
           />
         </a>
-        <h1
+        <h3
           className="author__title"
         >
           <a
             className="author__title-link"
-            href="/pages/about"
+            href="/about"
           >
             Test name
           </a>
-        </h1>
+        </h3>
         <p
           className="author__subtitle"
         >
