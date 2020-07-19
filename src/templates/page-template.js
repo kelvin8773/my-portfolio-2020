@@ -1,7 +1,7 @@
 // @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { MDXRenderer } from 'gatsby-plugin-mdx';
 
 import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
