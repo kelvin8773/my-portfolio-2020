@@ -6,7 +6,9 @@ socialImage: '/media/Kelvin-2020-work-from-home.jpg'
 
 ![Kelvin Work From Home- 2020-07-10](/media/Kelvin-2020-work-from-home.jpg)
 
-Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who loves to build **beautiful** and **smooth** websites to solve complex business problems. I excel in working hard and smart to bring **high quality** and **high satisfaction** outcome for my clients.
+Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who loves to build **beautiful** and **smooth** websites to solve complex business problems.
+
+I excel in working hard and smart to bring **high quality** and **high satisfaction** outcome for my clients.
 
 <div class="tech-icons">
   <img class="tech-icon" src="/media/logos/reactjs_logo.svg" alt="React.js">
@@ -27,14 +29,16 @@ Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who loves to build *
 	<figcaption>Global Dextra IT Team</figcaption>
 </figure>
 
-After decades at a [multi-national company](https://www.dextragroup.com/) where I inhabited multiple roles (I mostly work in southern part of China - cities of [Guangzhou](https://en.wikipedia.org/wiki/Guangzhou) & [Hong Kong](https://en.wikipedia.org/wiki/Hongkong)), I realized that programming had the potential to greatly improve business performance in nearly every scenario. In one of my recent projects, I designed a payroll software to help reduce manual workload and boost the performance of assembly line workers. The scripts that I wrote ran daily to collect info from end-users’ computers in order to help simplify IT staff procedures and improve user satisfaction. I envisioned that professionals with programming capabilities will play bigger roles in every business in the coming decade. 
+After decades at a [multi-national company](https://www.dextragroup.com/) where I inhabited multiple roles (I mostly work in southern part of China - cities of [Guangzhou](https://en.wikipedia.org/wiki/Guangzhou) & [Hong Kong](https://en.wikipedia.org/wiki/Hongkong)), I realized that programming had the potential to greatly improve business performance in nearly every scenario.
+
+In one of my recent projects, I designed a payroll software to help reduce manual workload and boost the performance of assembly line workers. The scripts that I wrote ran daily to collect info from end-users’ computers in order to help simplify IT staff procedures and improve user satisfaction. I envisioned that professionals with programming capabilities will play bigger roles in every business in the coming decade.
 
 <figure class="float-right" style="width: 240px">
 	<img src="/media/kelvin-cfa-team.jpg" alt="Team of CFA in San Francisco">
 	<figcaption>Team of CFA Equity Research in San Francisco.</figcaption>
 </figure>
 
-Few years ago, I also attended a MBA program in [California State University East Bay](https://www.csueastbay.edu/), where I studied the financial models of tech startups and big-name companies in the United States for 4 years. 
+Few years ago, I also attended a MBA program in [California State University East Bay](https://www.csueastbay.edu/), where I studied the financial models of tech startups and big-name companies in the United States for 4 years.
 
 Finally, I decided to quit my job to dive deep into the world of coding. I attended [Microverse](https://www.microverse.org/), an online coding school, to master every aspect of skills that professional programmers need in their daily lives, from the technical skills (Ruby on Rails / React / JavaScript / HTML / CSS ) to the soft skills (Pair Programming / Remote Working / Team Collaboration / Mentoring).
 
@@ -51,12 +55,10 @@ In my free time, I love to go for long runs, read history books, cook healthy fo
 
 <h1 align="center">Top Skills</h1>
 
-* **Coding Skills**: React/ Redux, Ruby on Rails, GatsbyJS, Testing, Bootstrap 4, JavaScript (ES6), HTML/CSS, SQL, Python, Docker, Git, Pair Programming
+- **Coding Skills**: React/ Redux, Ruby on Rails, GatsbyJS, Testing, Bootstrap 4, JavaScript (ES6), HTML/CSS, SQL, Python, Docker, Git, Pair Programming
 
-* **IT Skills**: IT Services Management, System administration, System & Network Security, IT Infrastructure, ERP, Windows Server 2008/2012, Linux
+- **IT Skills**: IT Services Management, System administration, System & Network Security, IT Infrastructure, ERP, Windows Server 2008/2012, Linux
 
-* **Business Skills**: Business Administration, Financial Reporting, Human Resource Management, Payroll (Hong Kong & China), Financial modeling and valuation, Project Management, Procurement (IT Equipment), Communication (verbal/writing)
+- **Business Skills**: Business Administration, Financial Reporting, Human Resource Management, Payroll (Hong Kong & China), Financial modeling and valuation, Project Management, Procurement (IT Equipment), Communication (verbal/writing)
 
-* **Soft Skills**: Leadership, Team Building, Mentoring, Remote working, Global Team Collaboration
-
-
+- **Soft Skills**: Leadership, Team Building, Mentoring, Remote working, Global Team Collaboration
