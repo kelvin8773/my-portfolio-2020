@@ -3,14 +3,14 @@ import type { Node as ReactNode } from 'react';
 
 export type RenderCallback = {
   // $FlowFixMe
-  render: (data: any) => ReactNode;
-}
+  render: (data: any) => ReactNode
+};
 
 export type Entry = {
-  getIn: (string[]) => string;
-}
+  getIn: (string[]) => string
+};
 
-export type WidgetFor = (string) => string;
+export type WidgetFor = string => string;
 
 export type PageContext = {
   tag: string,
@@ -36,7 +36,7 @@ export type Node = {
     title: string,
     socialImage?: string
   },
-  html: string,
+  body: string,
   id: string
 };
 
@@ -48,7 +48,7 @@ export type Edges = Array<Edge>;
 
 export type AllMdx = {
   allMdx: {
-    edges: Edges,
+    edges: Edges
   },
   group: {
     fieldValue: string,
