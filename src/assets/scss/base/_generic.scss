@@ -25,7 +25,7 @@ h4,
 h5,
 h6 {
   font-family: $typographic-font-header;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 h1 {
@@ -87,15 +87,13 @@ hr {
   margin-right: auto;
   margin-left: auto;
   background-size: 100% 26px;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 1px,
-    transparent 11px,
-    $color-base 11px,
-    $color-base 15px,
-    transparent 15px,
-    transparent 26px
-  );
+  background-image: linear-gradient(to bottom,
+      transparent 1px,
+      transparent 11px,
+      $color-base 11px,
+      $color-base 15px,
+      transparent 15px,
+      transparent 26px);
   width: 100px;
 }
 
@@ -158,6 +156,7 @@ figcaption {
 }
 
 @include breakpoint-sm {
+
   figure.float-left,
   figure.float-right,
   figure.center {

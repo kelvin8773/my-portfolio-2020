@@ -24,14 +24,14 @@ const Author = ({ author, isIndex }: Props) => (
       />
     </Link>
 
-    <h1 className={styles['author__title']}>
+    <h3 className={styles['author__title']}>
       <Link
         className={styles['author__title-link']}
         to={isIndex === true ? '/about' : '/'}
       >
         {author.name}
       </Link>
-    </h1>
+    </h3>
 
     <p className={styles['author__subtitle']}>{author.bio}</p>
   </div>
