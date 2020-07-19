@@ -19,7 +19,7 @@ socialImage: '/media/posts/getting-a-developer-job-part-1-cover.jpg'
 I started my coding career 2 years ago after I finished a project in a startup. Because being a badass programmer is my long time dream.
 
 ![System Support & Guide](https://dev-to-uploads.s3.amazonaws.com/i/ui8ji4gklpxlghdavo21.jpg)
-<small>Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">National Cancer Institute</a> on <a href="https://unsplash.com/s/photos/it-system-programming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@nci?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">National Cancer Institute</a> on <a href="https://unsplash.com/s/photos/it-system-programming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 ## In the industry for a long time.
 
@@ -34,7 +34,7 @@ Being an IT professional is great to gain many hands-on experiences and get to s
 Nowadays, all the systems and apps we use daily are designed and developed by others - from big tech companies (such as Microsoft, Google, Apple, Tencent, and Alibaba), to individual developers, 3rd party software agencies. 
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/bc2hry6ltfar0w62ic6b.jpg)
-<small>Photo by <a href="https://unsplash.com/@whoislimos?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">whoislimos</a> on <a href="https://unsplash.com/s/photos/unhappy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@whoislimos?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">whoislimos</a> on <a href="https://unsplash.com/s/photos/unhappy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 As an end-user, you have no control over how the applications should work and look, and what functions they should have, you have no choices but comply.
 
@@ -43,14 +43,14 @@ And it is even worse for an IT professional, not only I need to comply with what
 >That is a fairytale, however. 
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/ry2xz82rbt48d8c55zl6.jpg)
-<small>Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/joke-unrealistic?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@markuswinkler?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Markus Winkler</a> on <a href="https://unsplash.com/s/photos/joke-unrealistic?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 Because I have been in the industry long enough that I knew it - everyone wants to change once a while, and everyone does things slightly differently. 
 
 The result is, there are endless bugs and issues to fix when different systems and applications work together. And to make things even worse, once a company decided to modify its software or replace something, both the end-users and I need to start over again to adapt them without many choices.
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/nxkw50ywzthob22fqu85.jpg)
-<small>Photo by <a href="https://unsplash.com/@zeak?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dmitrij Paskevic</a> on <a href="https://unsplash.com/s/photos/busy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@zeak?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dmitrij Paskevic</a> on <a href="https://unsplash.com/s/photos/busy?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 I understand "the changes are for the greater good!". But still, being led by others and wait for the fortune come by itself is not my style. And I guess it is not for most people out there neither.
 
@@ -59,7 +59,7 @@ I understand "the changes are for the greater good!". But still, being led by ot
 ## There is a way to change it.
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/09ue35y43fcwqhiclqg1.jpg)
-<small align="center">Photo by <a href="https://unsplash.com/@noahbuscher?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Noah Buscher</a> on <a href="https://unsplash.com/s/photos/help?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@noahbuscher?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Noah Buscher</a> on <a href="https://unsplash.com/s/photos/help?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 Today, many tech companies or startups start to put the "developer" tab on their websites, offering APIs and even source codes of their products, so other developers or companies can manipulate and use their services in the way they like and want. 
 
@@ -75,7 +75,7 @@ I think that is probably why I want to **learn to code** in the first place.
 ## How it turns out today ...
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/e20har16ntt97hcbxqaa.jpg)
-<small>Photo by <a href="https://unsplash.com/@freetousesoundscom?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Free To Use Sounds</a> on <a href="https://unsplash.com/s/photos/now-programmer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@freetousesoundscom?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Free To Use Sounds</a> on <a href="https://unsplash.com/s/photos/now-programmer?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 As I made the decision 2 years ago, I have been trying many ideas to get started - data analysis, machine learning, big data, data science, and finally, web development. 
 
@@ -91,7 +91,7 @@ Check out the latest tech news today -
 So I think now I have more confidence in what is coming next in my career and I knew the more experiences I get into **the coding world**, the brighter future my career will be. That is probably the reason why I like to **Learn to Code**.
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/i/67ylnqh7eqf0g4632f6a.jpg)
-<small>Photo by <a href="https://unsplash.com/@joshrako?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Josh Rakower</a> on <a href="https://unsplash.com/s/photos/cool?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></small>
+<div>Photo by <a href="https://unsplash.com/@joshrako?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Josh Rakower</a> on <a href="https://unsplash.com/s/photos/cool?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></div>
 
 ---
 

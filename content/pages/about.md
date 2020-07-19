@@ -10,22 +10,22 @@ Hi, I am Kelvin Liang from China, a **Full Stack Engineer** who loves to build *
 
 I excel in working hard and smart to bring **high quality** and **high satisfaction** outcome for my clients.
 
-<div class="tech-icons">
-  <img class="tech-icon" src="/media/logos/reactjs_logo.svg" alt="React.js">
-  <img class="tech-icon" src="/media/logos/reduxjs_logo.png" alt="Redux.js">
-  <img class="tech-icon" src="/media/logos/typescript.svg" alt="Type Script">
-  <img class="tech-icon" src="/media/logos/gatsbyjs_logo.png" alt="Gatsby.js">
-  <img class="tech-icon" src="/media/logos/tailwind_logo.png" alt="Tailwind CSS">
-  <img class="tech-icon" src="/media/logos/testing-library_logo.png" alt="Testing Library">
-  <img class="tech-icon" src="/media/logos/jest_logo.png" alt="Jest">
+<div className="tech-icons">
+  <img className="tech-icon" src="/media/logos/reactjs_logo.svg" alt="React.js" />
+  <img className="tech-icon" src="/media/logos/reduxjs_logo.png" alt="Redux.js" />
+  <img className="tech-icon" src="/media/logos/typescript.svg" alt="Type Script" />
+  <img className="tech-icon" src="/media/logos/gatsbyjs_logo.png" alt="Gatsby.js" />
+  <img className="tech-icon" src="/media/logos/tailwind_logo.png" alt="Tailwind CSS" />
+  <img className="tech-icon" src="/media/logos/testing-library_logo.png" alt="Testing Library" />
+  <img className="tech-icon" src="/media/logos/jest_logo.png" alt="Jest" />
 </div>
 
 <h1 align="center">A little background</h1>
 
 ## Before ...
 
-<figure class="center">
-	<img src="/media/Kelvin_Dextra_Team.jpg" alt="Team of Dextra 2016">
+<figure className="center">
+	<img src="/media/Kelvin_Dextra_Team.jpg" alt="Team of Dextra 2016" />
 	<figcaption>Global Dextra IT Team</figcaption>
 </figure>
 
@@ -33,8 +33,8 @@ After decades at a [multi-national company](https://www.dextragroup.com/) where 
 
 In one of my recent projects, I designed a payroll software to help reduce manual workload and boost the performance of assembly line workers. The scripts that I wrote ran daily to collect info from end-users’ computers in order to help simplify IT staff procedures and improve user satisfaction. I envisioned that professionals with programming capabilities will play bigger roles in every business in the coming decade.
 
-<figure class="float-right" style="width: 240px">
-	<img src="/media/kelvin-cfa-team.jpg" alt="Team of CFA in San Francisco">
+<figure className="float-right" style="width: 240px">
+	<img src="/media/kelvin-cfa-team.jpg" alt="Team of CFA in San Francisco" />
 	<figcaption>Team of CFA Equity Research in San Francisco.</figcaption>
 </figure>
 
@@ -48,8 +48,8 @@ Now, I can comfortably build solutions based on ideas, solve business puzzles, a
 
 In my free time, I love to go for long runs, read history books, cook healthy food for my family, and travel to new places.
 
-<figure class="center" >
-	<img src="/media/Kelvin_Huizhou_local_runners.jpg" alt="Huizhou Local Running Team">
+<figure className="center" >
+	<img src="/media/Kelvin_Huizhou_local_runners.jpg" alt="Huizhou Local Running Team" />
 	<figcaption>I joined local running community for marathon running.</figcaption>
 </figure>
 

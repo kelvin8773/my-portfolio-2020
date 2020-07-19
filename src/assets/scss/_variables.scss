@@ -6,23 +6,21 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap');
 
+
 // Colors
 $blue: #264653;
 $green: #2a9d8f;
 $yellow: #e9c46a;
 $orange: #f4a261;
 $dark-orange: #e76f51;
-
 $light-coal: #333;
 $dark-coal: #2b2b2b;
-
 $panel: #f4f4f4;
 $panel-hover: #e4e4e4;
-
 $white: white;
 $shadow: #ccc;
 
-$color-base: rgb(11, 31, 54);
+$color-base: rgb(11, 58, 97);
 $color-primary: #5d93ff;
 $color-secondary: #fa983a;
 // $color-secondary: #f7a046;
@@ -33,11 +31,20 @@ $color-gray-border: lighten($color-base, 87%);
 $color-gray-bg: lighten($color-base, 79%);
 
 // Typographic
-$typographic-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$typographic-font-family: -apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen-Sans,
+Ubuntu,
+Cantarell,
+'Helvetica Neue',
+sans-serif;
 
-$typographic-font-text: 'Titillium Web', sans-serif;
-$typographic-font-header: 'Rowdies', cursive;
+$typographic-font-text: 'Titillium Web',
+sans-serif;
+$typographic-font-header: 'Rowdies',
+sans-serif;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 18px;
@@ -49,9 +56,7 @@ $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;
 $typographic-link-s-font-color: $color-secondary;
 
-$typographic-leading: round(
-  16 * ($typographic-root-font-size / 100) * $typographic-base-line-height
-);
+$typographic-leading: round(16 * ($typographic-root-font-size / 100) * $typographic-base-line-height);
 
 // Buttons
 $button-height: 35px;
