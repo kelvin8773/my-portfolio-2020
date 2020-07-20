@@ -11,7 +11,9 @@ module.exports = async (graphql, actions) => {
   const result = await graphql(`
     {
       allMdx(
-        filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+        filter: {
+          frontmatter: { template: { eq: "post" }, draft: { ne: true } }
+        }
       ) {
         group(field: frontmatter___category) {
           fieldValue
@@ -21,14 +23,14 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  _.each(result.data.allMdx.group, (category) => {
+  _.each(result.data.allMdx.group, category => {
     const numPages = Math.ceil(category.totalCount / postsPerPage);
     const categorySlug = `/category/${_.kebabCase(category.fieldValue)}`;
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
         path: i === 0 ? categorySlug : `${categorySlug}/page/${i}`,
-        component: path.resolve('./src/templates/category-template.js'),
+        component: path.resolve('./src/templates/category-template.tsx'),
         context: {
           category: category.fieldValue,
           currentPage: i,
