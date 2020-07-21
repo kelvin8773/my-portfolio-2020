@@ -6,10 +6,10 @@ This is a stie built with [Gatsby.js](https://www.gatsbyjs.org/) using [gatsby-s
 
 ## add/modified Features
 
-- support MDX format.
+- migrate to MDX support plugin.
 - remove Netlify cms support
 - use google fonts
-- use Typescript
+- migrate flow to Typescript
 
 ## To Get Started:
 
