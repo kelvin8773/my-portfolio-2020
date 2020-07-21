@@ -7,24 +7,33 @@ import Layout from '../components/Layout';
 import Sidebar from '../components/Sidebar';
 import Page from '../components/Page';
 import { useSiteMetadata } from '../hooks';
-import type { Mdx } from '../types';
+import { Mdx } from '../types';
 
-type Props = {
+interface Props {
   data: {
-    mdx: Mdx
-  }
-};
+    mdx: Mdx;
+  };
+}
 
 const PageTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   // const { html: pageBody } = data.mdx;
   const { body } = data.mdx;
   const { frontmatter } = data.mdx;
-  const { title: pageTitle, description: pageDescription, socialImage } = frontmatter;
-  const metaDescription = pageDescription !== null ? pageDescription : siteSubtitle;
+  const {
+    title: pageTitle,
+    description: pageDescription,
+    socialImage
+  } = frontmatter;
+  const metaDescription =
+    pageDescription !== null ? pageDescription : siteSubtitle;
 
   return (
-    <Layout title={`${pageTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImage} >
+    <Layout
+      title={`${pageTitle} - ${siteTitle}`}
+      description={metaDescription}
+      socialImage={socialImage}
+    >
       <Sidebar />
       <Page title={pageTitle}>
         <MDXRenderer>{body}</MDXRenderer>

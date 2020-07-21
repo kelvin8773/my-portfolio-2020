@@ -1,4 +1,3 @@
-// @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
@@ -7,12 +6,12 @@ import Feed from '../components/Feed';
 import Page from '../components/Page';
 import Pagination from '../components/Pagination';
 import { useSiteMetadata } from '../hooks';
-import type { AllMdx, PageContext } from '../types';
+import { AllMdx, PageContext } from '../types';
 
-type Props = {
-  data: AllMdx,
-  pageContext: PageContext
-};
+interface Props {
+  data: AllMdx;
+  pageContext: PageContext;
+}
 
 const TagTemplate = ({ data, pageContext }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
@@ -27,7 +26,10 @@ const TagTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
 
   const { edges } = data.allMdx;
-  const pageTitle = currentPage > 0 ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}` : `All Posts tagged as "${tag}" - ${siteTitle}`;
+  const pageTitle =
+    currentPage > 0
+      ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}`
+      : `All Posts tagged as "${tag}" - ${siteTitle}`;
 
   return (
     <Layout title={pageTitle} description={siteSubtitle}>
@@ -54,11 +56,17 @@ export const query = graphql`
       }
     }
     allMdx(
-        limit: $postsLimit,
-        skip: $postsOffset,
-        filter: { frontmatter: { tags: { in: [$tag] }, template: { eq: "post" }, draft: { ne: true } } },
-        sort: { order: DESC, fields: [frontmatter___date] }
-      ){
+      limit: $postsLimit
+      skip: $postsOffset
+      filter: {
+        frontmatter: {
+          tags: { in: [$tag] }
+          template: { eq: "post" }
+          draft: { ne: true }
+        }
+      }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
       edges {
         node {
           fields {

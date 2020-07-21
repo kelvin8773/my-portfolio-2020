@@ -1,11 +1,10 @@
-// @flow strict
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { useStaticQuery, StaticQuery } from 'gatsby';
 import PageTemplate from './page-template';
 import siteMetadata from '../../jest/__fixtures__/site-metadata';
 import mdx from '../../jest/__fixtures__/markdown-remark';
-import type { RenderCallback } from '../types';
+import { RenderCallback } from '../types';
 
 describe('PageTemplate', () => {
   const props = {
@@ -16,9 +15,7 @@ describe('PageTemplate', () => {
 
   beforeEach(() => {
     StaticQuery.mockImplementationOnce(
-      ({ render }: RenderCallback) => (
-        render(siteMetadata)
-      ),
+      ({ render }: RenderCallback) => render(siteMetadata),
       useStaticQuery.mockReturnValue(siteMetadata)
     );
   });

@@ -1,4 +1,3 @@
-// @flow strict
 const ICONS = {
   TWITTER: {
     path:

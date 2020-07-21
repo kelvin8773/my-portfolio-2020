@@ -1,4 +1,3 @@
-// @flow strict
 import { useStaticQuery, graphql } from 'gatsby';
 
 const useTagsList = () => {
@@ -6,7 +5,9 @@ const useTagsList = () => {
     graphql`
       query TagsListQuery {
         allMdx(
-          filter: { frontmatter: { template: { eq: "post" }, draft: { ne: true } } }
+          filter: {
+            frontmatter: { template: { eq: "post" }, draft: { ne: true } }
+          }
         ) {
           group(field: frontmatter___tags) {
             fieldValue

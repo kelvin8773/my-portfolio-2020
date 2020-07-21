@@ -1,26 +1,34 @@
-// @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
 
 import Layout from '../components/Layout';
 import Post from '../components/Post';
 import { useSiteMetadata } from '../hooks';
-import type { Mdx } from '../types';
+import { Mdx } from '../types';
 
-type Props = {
+interface Props {
   data: {
-    mdx: Mdx
-  }
-};
+    mdx: Mdx;
+  };
+}
 
 const PostTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const { frontmatter } = data.mdx;
-  const { title: postTitle, description: postDescription, socialImage } = frontmatter;
-  const metaDescription = postDescription !== null ? postDescription : siteSubtitle;
+  const {
+    title: postTitle,
+    description: postDescription,
+    socialImage
+  } = frontmatter;
+  const metaDescription =
+    postDescription !== null ? postDescription : siteSubtitle;
 
   return (
-    <Layout title={`${postTitle} - ${siteTitle}`} description={metaDescription} socialImage={socialImage} >
+    <Layout
+      title={`${postTitle} - ${siteTitle}`}
+      description={metaDescription}
+      socialImage={socialImage}
+    >
       <Post post={data.mdx} />
     </Layout>
   );

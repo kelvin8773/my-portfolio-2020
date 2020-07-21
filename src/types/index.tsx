@@ -1,18 +1,17 @@
-// @flow strict
 import type { Node as ReactNode } from 'react';
 
 export type RenderCallback = {
-  // $FlowFixMe
-  render: (data: any) => ReactNode
+  render: (data: any) => ReactNode;
 };
 
-export type Entry = {
-  getIn: (string[]) => string
+export interface Entry {
+  getIn: (arg0: string[]) => string;
 };
 
-export type WidgetFor = string => string;
+export type WidgetFor = (arg0: string) => string;
 
-export type PageContext = {
+
+export interface PageContext {
   tag: string,
   category: string,
   currentPage: number,
@@ -22,7 +21,7 @@ export type PageContext = {
   hasNextPage: boolean
 };
 
-export type Node = {
+export interface Node {
   fields: {
     slug: string,
     categorySlug?: string,
@@ -40,15 +39,15 @@ export type Node = {
   id: string
 };
 
-export type Edge = {
+export interface Edge {
   node: Node
 };
 
 export type Edges = Array<Edge>;
 
-export type AllMdx = {
+export interface AllMdx  {
   allMdx: {
-    edges: Edges
+    edges:  Edges
   },
   group: {
     fieldValue: string,
@@ -57,3 +56,4 @@ export type AllMdx = {
 };
 
 export type Mdx = Node;
+
