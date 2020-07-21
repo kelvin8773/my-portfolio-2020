@@ -36,13 +36,13 @@ npm install --save-dev jest-axe
 
 or
 
-```bash
+```shell
 yarn add --dev jest-axe
 ```
 
 With the package install, we can add the **Accessibility Test** into a project like this:
 
-```javascript
+```jsx
 // App.test.js
 import React from 'react';
 import App from './App';

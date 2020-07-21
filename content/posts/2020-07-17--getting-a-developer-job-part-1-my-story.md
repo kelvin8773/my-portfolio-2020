@@ -11,7 +11,6 @@ tags:
 description: 'I like to tell you what is my reason behind the "learn to code" phenomenon, and I hope you can find out yours.'
 socialImage: '/media/posts/getting-a-developer-job-part-1-cover.jpg'
 ---
-
 ![Cover Image](/media/posts/getting-a-developer-job-part-1-cover.jpg)
 
 >I like to tell you what is my reason of the "learn to code" phenomenon, and I hope you can find out yours after reading this.
