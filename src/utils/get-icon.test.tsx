@@ -1,4 +1,3 @@
-// @flow strict
 import getIcon from './get-icon';
 import { ICONS } from '../constants';
 
