@@ -19,22 +19,31 @@ $panel-hover: #e4e4e4;
 $white: white;
 $shadow: #ccc;
 
-$color-base: rgb(11, 58, 97);
+$color-base: #444;
 $color-primary: #5d93ff;
 $color-secondary: $orange;
 // $color-secondary: #f7a046;
 
 $color-white: #fff;
 $color-gray: lighten($color-base, 40%);
-$color-gray-border: lighten($color-base, 87%);
+$color-gray-border: lighten($color-base, 67%);
 $color-gray-bg: lighten($color-base, 79%);
 
 // Typographic
-$typographic-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+$typographic-font-family: -apple-system,
+BlinkMacSystemFont,
+'Segoe UI',
+Roboto,
+Oxygen-Sans,
+Ubuntu,
+Cantarell,
+'Helvetica Neue',
+sans-serif;
 
-$typographic-font-text: 'Titillium Web', sans-serif;
-$typographic-font-header: 'Rowdies', sans-serif;
+$typographic-font-text: 'Titillium Web',
+sans-serif;
+$typographic-font-header: 'Rowdies',
+sans-serif;
 
 $typographic-root-font-size: 100;
 $typographic-base-font-size: 18px;
@@ -46,9 +55,7 @@ $typographic-base-font-color: $color-base;
 $typographic-link-p-font-color: $color-primary;
 $typographic-link-s-font-color: $color-secondary;
 
-$typographic-leading: round(
-  16 * ($typographic-root-font-size / 100) * $typographic-base-line-height
-);
+$typographic-leading: round(16 * ($typographic-root-font-size / 100) * $typographic-base-line-height);
 
 // Buttons
 $button-height: 35px;

@@ -5,11 +5,11 @@ import styles from './Author.module.scss';
 
 type Props = {
   author: {
-    name: string,
-    bio: string,
-    photo: string
-  },
-  isIndex: ?boolean
+    name: string;
+    bio: string;
+    photo: string;
+  };
+  isIndex: boolean;
 };
 
 const Author = ({ author, isIndex }: Props) => (
