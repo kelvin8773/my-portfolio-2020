@@ -1,4 +1,3 @@
-// @flow strict
 import React from 'react';
 import { Link } from 'gatsby';
 
@@ -8,11 +7,11 @@ import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
 import styles from './Post.module.scss';
-import type { Node } from '../../types';
+import { Node } from '../../types';
 
-type Props = {
-  post: Node
-};
+interface Props {
+  post: Node;
+}
 
 const Post = ({ post }: Props) => {
   const { body } = post;

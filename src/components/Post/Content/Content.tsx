@@ -1,12 +1,11 @@
-// @flow strict
 import React from 'react';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styles from './Content.module.scss';
 
-type Props = {
-  body: string,
-  title: string
-};
+interface Props {
+  body: string;
+  title: string;
+}
 
 const Content = ({ body, title }: Props) => (
   <div className={styles['content']}>
