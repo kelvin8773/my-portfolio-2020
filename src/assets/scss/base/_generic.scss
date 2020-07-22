@@ -87,13 +87,15 @@ hr {
   margin-right: auto;
   margin-left: auto;
   background-size: 100% 26px;
-  background-image: linear-gradient(to bottom,
-      transparent 1px,
-      transparent 11px,
-      $color-base 11px,
-      $color-base 15px,
-      transparent 15px,
-      transparent 26px);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 1px,
+    transparent 11px,
+    $color-base 11px,
+    $color-base 15px,
+    transparent 15px,
+    transparent 26px
+  );
   width: 100px;
 }
 
@@ -156,7 +158,6 @@ figcaption {
 }
 
 @include breakpoint-sm {
-
   figure.float-left,
   figure.float-right,
   figure.center {
@@ -190,5 +191,17 @@ figcaption {
     width: 50px;
     margin-top: 20px;
     margin-right: 20px;
+  }
+}
+
+.project-list {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+  align-items: flex-start;
+
+  .project {
+    margin-top: 10px;
+    margin-right: 10px;
   }
 }
