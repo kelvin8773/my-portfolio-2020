@@ -34,7 +34,8 @@
     "react",
     "theme",
     "starter",
-    "disqus"
+    "disqus",
+    "typescript"
   ],
   "dependencies": {
     "@deckdeckgo/highlight-code": "^1.1.2",
