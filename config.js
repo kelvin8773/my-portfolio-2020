@@ -12,17 +12,17 @@ module.exports = {
   useKatex: false,
   menu: [
     {
-      label: 'Writting',
-      path: '/'
+      label: 'Writing',
+      path: '/',
     },
     {
       label: 'Projects',
-      path: '/projects'
+      path: '/projects',
     },
     {
       label: 'About me',
-      path: '/about'
-    }
+      path: '/about',
+    },
   ],
   author: {
     name: 'Kelvin Liang',
@@ -44,7 +44,7 @@ module.exports = {
       codepen: '',
       youtube: '',
       soundcloud: '',
-      devto: 'kelvin9877'
-    }
-  }
+      devto: 'kelvin9877',
+    },
+  },
 };
