@@ -87,13 +87,15 @@ hr {
   margin-right: auto;
   margin-left: auto;
   background-size: 100% 26px;
-  background-image: linear-gradient(to bottom,
-      transparent 1px,
-      transparent 11px,
-      $color-base 11px,
-      $color-base 15px,
-      transparent 15px,
-      transparent 26px);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 1px,
+    transparent 11px,
+    $color-base 11px,
+    $color-base 15px,
+    transparent 15px,
+    transparent 26px
+  );
   width: 100px;
 }
 
@@ -156,7 +158,6 @@ figcaption {
 }
 
 @include breakpoint-sm {
-
   figure.float-left,
   figure.float-right,
   figure.center {
@@ -190,5 +191,41 @@ figcaption {
     width: 50px;
     margin-top: 20px;
     margin-right: 20px;
+  }
+}
+
+.project-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .project {
+    width: 48%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    &:hover {
+      box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
+      -webkit-box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
+      -moz-box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
+    }
+  }
+}
+
+.github-stats {
+  width: 90%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  .stats {
+    width: 75%;
+    margin-right: 10px;
+  }
+
+  .language {
+    width: 45%;
   }
 }

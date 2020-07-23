@@ -199,14 +199,14 @@ export default () => {
 
   useEffect(() => {
     getNews(subreddit)
-      .then(res => {
+      .then((res) => {
         if (res.length > 0) {
           setPosts(res);
         } else {
           throw new Error('No such subreddit!');
         }
       })
-      .catch(e => {
+      .catch((e) => {
         setErrorMsg(e.message);
       })
       .finally(() => {
@@ -256,10 +256,8 @@ import dayjs from 'dayjs';
 
 const BASE_URL = 'https://api.pushshift.io/reddit/submission/search/';
 
-export default async subreddit => {
-  const threeMonthAgo = dayjs()
-    .subtract(3, 'months')
-    .unix();
+export default async (subreddit) => {
+  const threeMonthAgo = dayjs().subtract(3, 'months').unix();
   const numberOfPosts = 5;
 
   const url = `${BASE_URL}?subreddit=${subreddit}&after=${threeMonthAgo}&size=${numberOfPosts}&sort=desc&sort_type=score`;
@@ -275,7 +273,7 @@ export default async subreddit => {
           created_utc: post.created_utc,
           score: post.score,
           num_comments: post.num_comments,
-          author: post.author
+          author: post.author,
         });
         return result;
       }, []);
