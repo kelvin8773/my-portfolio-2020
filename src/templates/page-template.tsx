@@ -1,4 +1,3 @@
-// @flow strict
 import React from 'react';
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
@@ -17,13 +16,12 @@ interface Props {
 
 const PageTemplate = ({ data }: Props) => {
   const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-  // const { html: pageBody } = data.mdx;
   const { body } = data.mdx;
   const { frontmatter } = data.mdx;
   const {
     title: pageTitle,
     description: pageDescription,
-    socialImage
+    socialImage,
   } = frontmatter;
   const metaDescription =
     pageDescription !== null ? pageDescription : siteSubtitle;
