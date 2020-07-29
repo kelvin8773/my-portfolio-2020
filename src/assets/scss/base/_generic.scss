@@ -194,25 +194,6 @@ figcaption {
   }
 }
 
-.project-list {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  .project {
-    width: 48%;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    &:hover {
-      box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
-      -webkit-box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
-      -moz-box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
-    }
-  }
-}
-
 .github-stats {
   width: 90%;
   display: flex;

@@ -2,11 +2,15 @@
 @import '../../assets/scss/mixins';
 
 .projectList {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
 
-  &__item {
-    margin-right: 50px;
-    margin-bottom: 20px;
+  &__card {
+    margin: 25px 0;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    border: 1px black solid;
   }
 }

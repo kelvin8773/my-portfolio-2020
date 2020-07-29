@@ -19,13 +19,21 @@ const useGithubRepoData = () => {
                     name
                     color
                   }
-                  nameWithOwner
-                  watchers {
-                    totalCount
-                  }
                   stargazers {
                     totalCount
                   }
+                  url
+                  repositoryTopics(first: 10) {
+                    edges {
+                      node {
+                        topic {
+                          name
+                        }
+                        url
+                      }
+                    }
+                  }
+                  pushedAt
                 }
               }
             }
@@ -34,7 +42,6 @@ const useGithubRepoData = () => {
       }
     }
   `);
-
   return github.user.pinnedItems.edges;
 };
 
