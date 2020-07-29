@@ -5,12 +5,5 @@
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-
-  &__card {
-    margin: 25px 0;
-    padding: 10px;
-    border-radius: 10px;
-    width: 100%;
-    border: 1px black solid;
-  }
+  margin-top: 20px;
 }

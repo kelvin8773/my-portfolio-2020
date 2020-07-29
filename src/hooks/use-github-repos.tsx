@@ -34,6 +34,17 @@ const useGithubRepoData = () => {
                     }
                   }
                   pushedAt
+                  languages(
+                    first: 5
+                    orderBy: { field: SIZE, direction: DESC }
+                  ) {
+                    edges {
+                      node {
+                        name
+                        color
+                      }
+                    }
+                  }
                 }
               }
             }
