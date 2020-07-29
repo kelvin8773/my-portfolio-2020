@@ -1,5 +1,5 @@
 {
-  "version": "3.0.5",
+  "version": "2.0.0",
   "name": "gatsby-starter-lumen",
   "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
   "main": "n/a",
@@ -41,6 +41,7 @@
     "@deckdeckgo/highlight-code": "^1.1.2",
     "@mdx-js/mdx": "^1.6.11",
     "@mdx-js/react": "^1.6.11",
+    "@octokit/graphql": "^4.5.3",
     "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
