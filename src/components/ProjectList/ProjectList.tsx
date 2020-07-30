@@ -24,19 +24,24 @@ const ProjectList = () => {
 
         return (
           <div key={name} className="md:flex mb-8 w-full">
-            <div className="md:flex-shrink-0">
+            <a
+              href={homepageUrl ? homepageUrl : url}
+              target="_blank"
+              title="Project Demo"
+              className="md:flex-shrink-0"
+            >
               <img
                 className="rounded-lg md:w-56"
                 src={openGraphImageUrl}
                 alt="project image"
               />
-            </div>
+            </a>
             <div className="mt-4 mb-4 md:mt-0 md:ml-6">
               <div className="uppercase tracking-wide text-sm text-indigo-600 font-bold">
                 {name}
               </div>
               <a
-                href={homepageUrl}
+                href={url}
                 target="_blank"
                 className="block mb-4 text-lg leading-tight font-semibold text-gray-900 hover:underline"
               >
@@ -81,23 +86,13 @@ const ProjectList = () => {
                 })}
               </div>
 
-              {/* button   */}
-              <div className="mt-6">
-                <a
-                  href={homepageUrl}
-                  target="_blank"
-                  className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-1 px-5 rounded-full mr-5"
-                >
-                  Demo
-                </a>
-                <a
-                  href={url}
-                  target="_blank"
-                  className="bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-1 px-5 rounded-full"
-                >
-                  Source Code
-                </a>
-              </div>
+              <a
+                href={url}
+                target="_blank"
+                className="text-indigo-400 hover:text-orange-500 text-sm italic"
+              >
+                More info ...
+              </a>
             </div>
           </div>
         );
