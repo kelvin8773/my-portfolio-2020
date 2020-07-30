@@ -17,7 +17,7 @@ socialImage: '/media/posts/how-to-write-tests-for-react-part-2_cover.jpg'
 
 > Writing React Test with React recommend libraries - Jest & Testing Library for React Intermediate users.
 
-## **Please Note**
+#### **Please Note**
 
 _In this article, I will explore more advanced concepts in React Testing, I hope you find them helpful for your situations. If you are a beginner in React or new to testing, I would suggest you check out [Part 1 Here](https://dev.to/kelvin9877/how-to-write-tests-for-react-in-2020-4oai) to have some fundamental knowledge before continue, thanks!_
 
@@ -42,7 +42,7 @@ yarn add --dev jest-axe
 
 With the package install, we can add the **Accessibility Test** into a project like this:
 
-```jsx
+```js
 // App.test.js
 import React from 'react';
 import App from './App';
@@ -74,11 +74,12 @@ It will alert you like below:
 
 ![A11y test wrong role](https://dev-to-uploads.s3.amazonaws.com/i/1qady8vhidfoduh4d8nz.png)
 
-> Check out a List of WAI-ARIA Roles [Here](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles).
+_**Check out a List of WAI-ARIA Roles
+[Here](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles).**_
 
 Replace nav with navigation role as below, the test will pass.
 
-```javascript
+```js
 // ./components/navBar.js
 ...
 <div className="navbar" role='navigation'>
@@ -91,7 +92,13 @@ As we can see above, this test will help ensure you follow the [WCAG(Web Content
 
 ## Second, adding a **Snapshot Test**.
 
-> Snapshot tests are a very useful tool whenever you want to make sure your UI does not change unexpectedly. -- From [Jest](http://jestjs.io/)
+<blockquote>
+  Snapshot tests are a very useful tool whenever you want to make sure your UI
+  does not change unexpectedly.
+  <span>
+    From <a href="https://jestjs.io">Jest</a>
+  </span>
+</blockquote>
 
 **You can put the test on the entire app or one specific component**. They can serve different purposes during the development cycle, you can either use Snapshot Test to ensure your app's UI doesn't change over time or compare the differences between the last snapshot with current output to iterate through your development.
 
@@ -140,7 +147,9 @@ With this test in place, once you make any change over the DOM, the test will fa
 
 In this case, you can either press `u` to update the snapshot or change your code to make the test pass again.
 
-> If you adding a snapshot test at the early stage of development, you might want to turn off the test for a while by adding `x` in front of the test, to avoid getting too many errors and slowing down the process.
+#### Please Note
+
+_**If you adding a snapshot test at the early stage of development, you might want to turn off the test for a while by adding `x` in front of the test, to avoid getting too many errors and slowing down the process.**_
 
 ```js
  xtest('should have no accessibility violations', async () => {
@@ -172,7 +181,9 @@ However, we should not:
 - Test the API call
 - Call the real API for testing
 
-> Because most of the time, API is hosted by the third party, the time to fetch data is uncontrollable. Besides, for some APIs, given the same parameters, the data come back may vary, which will make the test result unpredictable.
+#### Please Note
+
+_**Because most of the time, API is hosted by the third party, the time to fetch data is uncontrollable. Besides, for some APIs, given the same parameters, the data come back may vary, which will make the test result unpredictable.**_
 
 For testing with an API, we should:
 
@@ -318,7 +329,9 @@ const setup = (component) => (
 jest.mock('../helpers/getNews');
 ```
 
-> Please add the above code at the beginning of every test file that would possibly trigger the API call, not just the API test file. I make this mistake at the beginning without any notifications, until I add console.log('call real API') to monitor calls during the test.
+#### Please Note
+
+_Please add the above code at the beginning of every test file that would possibly trigger the API call, not just the API test file. I make this mistake at the beginning without any notifications, until I add console.log('call real API') to monitor calls during the test._
 
 Next, we start to write a simple test to check whether a title and loading message are shown correctly.
 
@@ -365,13 +378,13 @@ test('load news from api correctly', async () => {
 ...
 ```
 
-### Please Note
+#### Please Note
 
 ```js
 expect(getNews).toHaveBeenCalledTimes(1);
 ```
 
-> This code is essential here to ensure the API call is only called as expected.
+- This code is essential here to ensure the API call is only called as expected.
 
 When this API call test passes accordingly, we can start to explore something more exciting!
 
@@ -436,8 +449,9 @@ test('load news with network errors', async () => {
 
 Finally, you can find the complete test code from [here](https://github.com/kelvin8773/react-test-examples/blob/master/src/pages/News.test.js).
 
-> **Please Note**
-> They are just simple test cases for demonstration purposes, in the real-world scenarios, the tests would be much more complex. You can check out more testing examples from my other project [here](https://github.com/ooloo-io/reddit-timer-kelvin8773).
+#### **Please Note**
+
+- They are just simple test cases for demonstration purposes, in the real-world scenarios, the tests would be much more complex. You can check out more testing examples from my other project [here](https://github.com/ooloo-io/reddit-timer-kelvin8773).
 
 ---
 
