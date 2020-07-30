@@ -78,10 +78,10 @@ img {
 }
 
 hr {
-  margin-top: 52px;
-  margin-bottom: 52px;
+  margin-top: 64px;
+  margin-bottom: 64px;
   border: 0;
-  color: $color-base;
+  color: $color-gray;
   display: block;
   height: 26px;
   margin-right: auto;
@@ -91,12 +91,12 @@ hr {
     to bottom,
     transparent 1px,
     transparent 11px,
-    $color-base 11px,
-    $color-base 15px,
+    $color-gray 11px,
+    $color-gray 15px,
     transparent 15px,
     transparent 26px
   );
-  width: 100px;
+  width: 120px;
 }
 
 a {
@@ -191,25 +191,6 @@ figcaption {
     width: 50px;
     margin-top: 20px;
     margin-right: 20px;
-  }
-}
-
-.project-list {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-
-  .project {
-    width: 48%;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    &:hover {
-      box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
-      -webkit-box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
-      -moz-box-shadow: 1px -1px 5px 1px rgba(85, 85, 85, 0.75);
-    }
   }
 }
 

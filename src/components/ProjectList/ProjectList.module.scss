@@ -1,2 +1,9 @@
 @import '../../assets/scss/variables';
 @import '../../assets/scss/mixins';
+
+.projectList {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  margin-top: 20px;
+}

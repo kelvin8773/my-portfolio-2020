@@ -10,7 +10,7 @@
     "clean": "rimraf .cache public",
     "lint:js": "eslint --cache --ext .js,.jsx .",
     "lint:scss": "stylelint \"src/**/*.scss\"",
-    "lint": "concurrently \"yarn run lint:js\" \"yarn run lint:scss\" \"yarn flow\"",
+    "lint": "concurrently \"yarn run lint:js\" \"yarn run lint:scss\" ",
     "test": "jest --config ./jest/jest-config.js",
     "test:coverage": "jest --coverage --config ./jest/jest-config.js",
     "test:watch": "jest --watch --config ./jest/jest-config.js"
@@ -41,6 +41,8 @@
     "@deckdeckgo/highlight-code": "^1.1.2",
     "@mdx-js/mdx": "^1.6.11",
     "@mdx-js/react": "^1.6.11",
+    "@octokit/graphql": "^4.5.3",
+    "axios": "^0.19.2",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.7.0",
@@ -72,6 +74,7 @@
     "gatsby-remark-responsive-iframe": "^2.4.10",
     "gatsby-remark-smartypants": "^2.3.9",
     "gatsby-source-filesystem": "^2.3.18",
+    "gatsby-source-graphql": "^2.6.2",
     "gatsby-transformer-remark": "^2.8.25",
     "gatsby-transformer-sharp": "^2.5.10",
     "invariant": "^2.2.4",
@@ -85,7 +88,8 @@
     "react": "^16.13.1",
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "tailwindcss": "^1.6.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.4",

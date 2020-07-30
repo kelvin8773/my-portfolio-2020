@@ -1,5 +1,6 @@
 'use strict';
 
+const tailwindcss = require('tailwindcss');
 const lost = require('lost');
 const pxtorem = require('postcss-pxtorem');
 const autoprefixer = require('autoprefixer');
@@ -27,12 +28,13 @@ module.exports = [
       'padding-right',
       'border-radius',
       'width',
-      'max-width'
+      'max-width',
     ],
     selectorBlackList: [],
     replace: true,
     mediaQuery: false,
-    minPixelValue: 0
+    minPixelValue: 0,
   }),
-  autoprefixer()
+  tailwindcss(),
+  autoprefixer(),
 ];
