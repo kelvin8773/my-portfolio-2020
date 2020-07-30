@@ -1,9 +1,10 @@
 'use strict';
 
-const fetch = require(`node-fetch`);
+const fetch = require('node-fetch');
+const { createHttpLink } = require('apollo-link-http');
 const siteConfig = require('./config.js');
 const postCssPlugins = require('./postcss-config.js');
-const { createHttpLink } = require(`apollo-link-http`);
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 });
@@ -64,15 +65,14 @@ module.exports = {
         `,
         feeds: [
           {
-            serialize: ({ query: { site, allMdx } }) =>
-              allMdx.edges.map((edge) => ({
-                ...edge.node.frontmatter,
-                description: edge.node.frontmatter.description,
-                date: edge.node.frontmatter.date,
-                url: site.siteMetadata.site_url + edge.node.fields.slug,
-                guid: site.siteMetadata.site_url + edge.node.fields.slug,
-                custom_elements: [{ 'content:encoded': edge.node.html }],
-              })),
+            serialize: ({ query: { site, allMdx } }) => allMdx.edges.map((edge) => ({
+              ...edge.node.frontmatter,
+              description: edge.node.frontmatter.description,
+              date: edge.node.frontmatter.date,
+              url: site.siteMetadata.site_url + edge.node.fields.slug,
+              guid: site.siteMetadata.site_url + edge.node.fields.slug,
+              custom_elements: [{ 'content:encoded': edge.node.html }],
+            })),
             query: `
               {
                 allMdx(
@@ -184,12 +184,11 @@ module.exports = {
           }
         `,
         output: '/sitemap.xml',
-        serialize: ({ site, allSitePage }) =>
-          allSitePage.edges.map((edge) => ({
-            url: site.siteMetadata.siteUrl + edge.node.path,
-            changefreq: 'daily',
-            priority: 0.7,
-          })),
+        serialize: ({ site, allSitePage }) => allSitePage.edges.map((edge) => ({
+          url: site.siteMetadata.siteUrl + edge.node.path,
+          changefreq: 'daily',
+          priority: 0.7,
+        })),
       },
     },
     {
@@ -224,15 +223,13 @@ module.exports = {
         typeName: 'GitHub',
         fieldName: 'github',
         // Create Apollo Link manually. Can return a Promise.
-        createLink: (pluginOptions) => {
-          return createHttpLink({
-            uri: 'https://api.github.com/graphql',
-            headers: {
-              Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-            },
-            fetch,
-          });
-        },
+        createLink: (pluginOptions) => createHttpLink({
+          uri: 'https://api.github.com/graphql',
+          headers: {
+            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+          },
+          fetch,
+        }),
         // refetch data interval in seconds
         // refetchInterval: 300,
       },
