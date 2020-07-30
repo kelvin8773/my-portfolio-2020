@@ -43,7 +43,10 @@ const useGithubRepoData = () => {
                         name
                         color
                       }
+                      size
                     }
+                    totalSize
+                    totalCount
                   }
                 }
               }

@@ -4,7 +4,6 @@ import styles from './ProjectList.module.scss';
 
 const ProjectList = () => {
   const repos = useGithubRepoData();
-  console.log(repos);
   return (
     <div className={styles['projectList']}>
       {repos.map((repo) => {
