@@ -73,7 +73,7 @@ const ProjectList = () => {
                       <a
                         href={url}
                         target="_blank"
-                        className="hover:text-indigo-700"
+                        className="hover:text-orange-700"
                       >
                         #{name}
                       </a>

@@ -234,7 +234,7 @@ module.exports = {
           });
         },
         // refetch data interval in seconds
-        refetchInterval: 300,
+        // refetchInterval: 300,
       },
     },
   ],
