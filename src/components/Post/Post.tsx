@@ -28,10 +28,17 @@ const Post = ({ post }: Props) => {
       </Link>
 
       <div className={styles['post__content']}>
-        <Header title={title} date={date} readingTime={time} />
+        <Header
+          title={title}
+          date={date}
+          readingTime={time}
+          socialImage={socialImage}
+          description={description}
+        />
         <div className="flex justify-center align-items mt-5">
           {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
         </div>
+
         <Content body={body} />
       </div>
 
