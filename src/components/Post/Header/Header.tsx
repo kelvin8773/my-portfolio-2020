@@ -30,13 +30,13 @@ const Header = ({
     <div className={styles['header']}>
       <h1 className={styles['header__title']}>{title}</h1>
       <img
-        className="w-10/12 rounded shadow-md"
+        className="md:w-10/12 rounded shadow-md md:mt-0 mt-4"
         src={socialImage}
         alt="Cover Image"
       />
 
       <div
-        className="w-9/12 text-center text-2xl font-bold capitalize
+        className="md:w-9/12 text-center text-2xl font-bold capitalize
                 text-orange-700 bg-gray-100 p-8 
                 my-6 rounded-lg shadow-md"
       >
