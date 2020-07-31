@@ -87,6 +87,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "reading-time": "^1.2.0",
     "tailwindcss": "^1.6.0"
   },
   "devDependencies": {
