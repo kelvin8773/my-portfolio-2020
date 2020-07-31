@@ -13,10 +13,6 @@ description: 'A How to Guide to teach you how to integrate Bootstrap 4 and Font 
 socialImage: '/media/posts/integrate-bootstrap-4-and-fontawesome-5-in-rails-6_cover.png'
 ---
 
-![Cover Image](/media/posts/integrate-bootstrap-4-and-fontawesome-5-in-rails-6_cover.png)
-
-> A How to Guide to teach you how to integrate Bootstrap 4 and Font Awesome 5 into Rails 6.
-
 [**Rails 6**](https://weblog.rubyonrails.org/2019/8/15/Rails-6-0-final-release/) is out for few months now, I happen needed to do a project with it. But I found I can't use the same way to integrate [**Bootstrap 4**](https://getbootstrap.com/) & [**Font Awesome 5**](https://fontawesome.com/) in Rails 5 in my new project. Because in Rails 6, it start to use [webpack](https://github.com/rails/rails/pull/33079) as default Javascript complier.
 
 I try to "Google" it, but nothing valid come back. I did try with some instructions from medium or Stack Overflow, none of them are working.
@@ -93,7 +89,7 @@ environment.plugins.append(
   new webpack.ProvidePlugin({
     $: 'jquery',
     jQuery: 'jquery',
-    Popper: ['popper.js', 'default']
+    Popper: ['popper.js', 'default'],
   })
 );
 module.exports = environment;
@@ -119,11 +115,11 @@ There are some components require adding custom javascript code into your projec
 
 ```javascript
 //custom.js
-$(function() {
+$(function () {
   $('[data-toggle="tooltip"]').tooltip(); //highlight-line
 });
 
-$(function() {
+$(function () {
   $('[data-toggle="popover"]').popover();
 });
 ```
