@@ -10,6 +10,10 @@ This is a stie built with [Gatsby.js](https://www.gatsbyjs.org/) using [gatsby-s
 - remove Netlify cms support
 - use google fonts
 - migrate flow to Typescript
+- Add TailwindCss Support
+- Add day.js (alternative of moment but smaller)
+- Add Project page
+- Add Update Post page UI
 
 ## To Get Started:
 
