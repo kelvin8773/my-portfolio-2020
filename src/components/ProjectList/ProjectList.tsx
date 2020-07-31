@@ -1,4 +1,10 @@
 import React from 'react';
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+import localizedFormat from 'dayjs/plugin/localizedFormat';
+dayjs.extend(relativeTime);
+dayjs.extend(localizedFormat);
+
 import useGithubRepoData from '../../hooks/use-github-repos';
 import styles from './ProjectList.module.scss';
 
@@ -84,6 +90,18 @@ const ProjectList = () => {
                     </span>
                   );
                 })}
+              </div>
+
+              {/* more info */}
+              <div className="text-sm italic capitalize">
+                <span className="mr-4">
+                  <strong>Start: </strong>
+                  {dayjs(createdAt).fromNow()}
+                </span>
+                <span>
+                  <strong>Last Update: </strong>
+                  {dayjs(pushedAt).format('ll')}
+                </span>
               </div>
 
               <a

@@ -46,6 +46,7 @@
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.7.0",
+    "dayjs": "^1.8.31",
     "gatsby": "^2.23.22",
     "gatsby-link": "^2.4.11",
     "gatsby-plugin-catch-links": "^2.3.10",
