@@ -35,7 +35,7 @@ const Post = ({ post }: Props) => {
           socialImage={socialImage}
           description={description}
         />
-        <div className="flex justify-center align-items mt-5">
+        <div className="flex justify-center align-items mt-5 px-4">
           {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
         </div>
 

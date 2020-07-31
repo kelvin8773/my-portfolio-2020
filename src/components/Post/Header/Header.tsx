@@ -30,7 +30,7 @@ const Header = ({
     <div className={styles['header']}>
       <h1 className={styles['header__title']}>{title}</h1>
       <img
-        className="md:w-10/12 rounded shadow-md md:mt-0 mt-4"
+        className="md:w-10/12 md:mt-0 mt-4 rounded shadow-md "
         src={socialImage}
         alt="Cover Image"
       />
