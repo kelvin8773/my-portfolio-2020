@@ -13,10 +13,6 @@ description: 'Writing React Tests with React recommend libraries — Jest & 
 socialImage: '/media/posts/how-to-write-tests-for-react-part-1_cover.jpeg'
 ---
 
-![Cover Image](/media/posts/how-to-write-tests-for-react-part-1_cover.jpeg)
-
-> Writing React Tests with React recommend libraries — [Jest](https://jestjs.io/docs/en/tutorial-react) & [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) for complete beginners.
-
 ![screenshot from React docs](https://cdn.filestackcontent.com/siFmmSFQFeJWjyzug1Xq)
 **_From [https://reactjs.org/docs/test-utils.html#overview](https://reactjs.org/docs/test-utils.html#overview)_**
 
@@ -134,11 +130,11 @@ const links = [
   { text: 'Home', location: '/' },
   { text: 'Contact', location: '/contact' },
   { text: 'About', location: '/about' },
-  { text: 'Search', location: '/search' }
+  { text: 'Search', location: '/search' },
 ];
 
 // I use test.each to iterate the test cases above
-test.each(links)('Check if Nav Bar have %s link.', link => {
+test.each(links)('Check if Nav Bar have %s link.', (link) => {
   render(<NavBar />);
   //Ensure the text is in the dom, will throw error it can't find
   const linkDom = screen.getByText(link.text);
@@ -217,9 +213,9 @@ const entries = [
   {
     name: 'kent'.repeat(10),
     email: 'kent@testing.com',
-    password: 'w%oRD123yes'
+    password: 'w%oRD123yes',
   },
-  { name: 'Robert', email: 'robert_bell@example.com', password: 'r&bsEc234E' }
+  { name: 'Robert', email: 'robert_bell@example.com', password: 'r&bsEc234E' },
 ];
 ```
 
@@ -320,7 +316,7 @@ const SignupForm = () => (
     <h1>Anywhere in your app!</h1>
     <Formik
       initialValues={{ name: '', email: '', password: '' }}
-      validate={values => {
+      validate={(values) => {
         const errors = {};
         if (!values.name) {
           errors.name = 'Name is Required';
@@ -356,7 +352,7 @@ const SignupForm = () => (
         handleChange,
         handleBlur,
         handleSubmit,
-        isSubmitting
+        isSubmitting,
         /* and other goodies */
       }) => (
         <form onSubmit={handleSubmit}>

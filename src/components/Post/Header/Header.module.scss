@@ -1,0 +1,37 @@
+@import '../../../assets/scss/variables';
+@import '../../../assets/scss/mixins';
+
+.header {
+  max-width: $layout-post-single-width;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+  &__title {
+    font-size: $typographic-base-font-size * 2;
+    max-width: $layout-post-width;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    text-align: center;
+    @include line-height(1.65);
+    @include margin-top(1);
+    @include margin-bottom(0);
+  }
+}
+
+@include breakpoint-md {
+  .header {
+    padding: 0;
+
+    &__title {
+      font-size: $typographic-base-font-size * 3;
+      @include line-height(2.25);
+      @include margin-top(2.25);
+      @include margin-bottom(1.5);
+    }
+  }
+}

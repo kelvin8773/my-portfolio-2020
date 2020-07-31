@@ -2,8 +2,8 @@ blockquote {
   border: 0 solid $dark-coal;
   display: block;
   background: $white;
-  padding: 50px 50px 25px 50px;
-  margin: 0 0 20px;
+  padding: 50px 50px 15px 50px;
+  margin: 40px 0;
   position: relative;
   font-family: Georgia, serif;
   font-size: 20px;
@@ -15,38 +15,46 @@ blockquote {
   -moz-box-shadow: 2px 2px 15px $shadow;
   -webkit-box-shadow: 2px 2px 15px $shadow;
   box-shadow: 2px 2px 15px $shadow;
-}
 
-blockquote::before {
-  content: '“';
-  font-family: Georgia, serif;
-  font-size: 60px;
-  font-weight: bold;
-  color: $yellow;
-  position: absolute;
-  left: 10px;
-  top: 5px;
-}
+  &::before {
+    content: '“';
+    font-family: Georgia, serif;
+    font-size: 60px;
+    font-weight: bold;
+    color: $yellow;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
 
-blockquote::after {
-  content: '';
-}
+  &::after {
+    content: '';
+  }
 
-blockquote a {
-  text-decoration: none;
-  cursor: pointer;
-  padding: 0 3px;
-  color: $green;
-}
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $yellow;
 
-blockquote a:hover {
-  color: $orange;
-}
+    &:hover {
+      color: $orange;
+    }
+  }
 
-blockquote em {
-  font-style: italic;
-}
+  em {
+    font-style: italic;
+  }
 
-blockquote p {
-  margin: 0 0 0 10px;
+  p {
+    margin: 0 0 0 10px;
+  }
+
+  span {
+    display: block;
+    text-align: right;
+    color: $color-gray;
+    font-style: italic;
+    font-weight: bold;
+    margin-top: 1em;
+  }
 }

@@ -3,11 +3,13 @@ import { Link } from 'gatsby';
 
 import Author from './Author';
 import Comments from './Comments';
+import Header from './Header';
 import Content from './Content';
 import Meta from './Meta';
 import Tags from './Tags';
 import styles from './Post.module.scss';
 import { Node } from '../../types';
+import readingTime from 'reading-time';
 
 interface Props {
   post: Node;
@@ -16,7 +18,8 @@ interface Props {
 const Post = ({ post }: Props) => {
   const { body } = post;
   const { tagSlugs, slug } = post.fields;
-  const { tags, title, date } = post.frontmatter;
+  const { tags, title, date, description, socialImage } = post.frontmatter;
+  const time = readingTime(body, { wordsPerMinute: 300 }).text;
 
   return (
     <div className={styles['post']}>
@@ -25,7 +28,18 @@ const Post = ({ post }: Props) => {
       </Link>
 
       <div className={styles['post__content']}>
-        <Content body={body} title={title} />
+        <Header
+          title={title}
+          date={date}
+          readingTime={time}
+          socialImage={socialImage}
+          description={description}
+        />
+        <div className="flex justify-center align-items mt-5">
+          {tags && tagSlugs && <Tags tags={tags} tagSlugs={tagSlugs} />}
+        </div>
+
+        <Content body={body} />
       </div>
 
       <div className={styles['post__footer']}>

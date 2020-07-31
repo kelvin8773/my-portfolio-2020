@@ -46,6 +46,7 @@
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.7.0",
+    "dayjs": "^1.8.31",
     "gatsby": "^2.23.22",
     "gatsby-link": "^2.4.11",
     "gatsby-plugin-catch-links": "^2.3.10",
@@ -55,8 +56,6 @@
     "gatsby-plugin-google-gtag": "^2.1.9",
     "gatsby-plugin-manifest": "^2.4.17",
     "gatsby-plugin-mdx": "^1.2.27",
-    "gatsby-plugin-netlify": "^2.3.10",
-    "gatsby-plugin-netlify-cms": "^4.3.10",
     "gatsby-plugin-offline": "^3.2.16",
     "gatsby-plugin-optimize-svgs": "^1.0.4",
     "gatsby-plugin-react-helmet": "^3.3.9",
@@ -81,7 +80,6 @@
     "katex": "^0.11.1",
     "lodash": "^4.17.15",
     "moment": "^2.27.0",
-    "netlify-cms-app": "^2.12.16",
     "node-sass": "^4.14.1",
     "normalize-scss": "^7.0.1",
     "prismjs": "^1.20.0",
@@ -89,6 +87,7 @@
     "react-disqus-comments": "^1.4.0",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
+    "reading-time": "^1.2.0",
     "tailwindcss": "^1.6.0"
   },
   "devDependencies": {
