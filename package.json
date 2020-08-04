@@ -1,7 +1,7 @@
 {
-  "version": "3.0.5",
-  "name": "gatsby-starter-lumen",
-  "description": "A minimal, lightweight and mobile-first starter for creating blazing-fast static blogs",
+  "version": "1.0.0",
+  "name": "Kelvin-Liang-portfolio-2020",
+  "description": "My portfolio site with combine blogs & projects in 2020.",
   "main": "n/a",
   "scripts": {
     "develop": "yarn run clean && gatsby develop",
