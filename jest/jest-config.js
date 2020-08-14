@@ -4,6 +4,7 @@ module.exports = {
   rootDir: '../',
   transform: {
     '^.+\\.js?$': '<rootDir>/jest/jest-preprocess.js',
+    '^.+\\.tsx?$': '<rootDir>/jest/jest-preprocess.js',
   },
   testMatch: [
     '**/__tests__/**/*.js',
