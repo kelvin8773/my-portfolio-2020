@@ -4,21 +4,28 @@ This is a stie built with [Gatsby.js](https://www.gatsbyjs.org/) using [gatsby-s
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/2be54f54-6f10-493e-afd4-fc8ed1023eed/deploy-status)](https://app.netlify.com/sites/kelvin-portfolio/deploys)
 
-## add/modified Features
+## Project ScreenShoot
 
-- migrate to MDX support plugin.
-- remove Netlify cms support
-- use google fonts
-- migrate flow to Typescript
-- Add TailwindCss Support
+![Project ScreenShoot](./docs/my-portfolio-2020.png)
+
+## [Project Link](https://kelvinliang.cn)
+
+## Add/modified Features
+
+- Migrate to MDX support plugin
+- Use google font
+- Migrate flow to TypeScript
+- Add TailwindCSS Support
 - Add day.js (alternative of moment but smaller)
 - Add Project page
-- Add Update Post page UI
+- Update Post page UI
 
-## To Get Started:
+## To started:
 
 ```bash
 yarn install
+```
 
+```bash
 yarn develop
 ```
