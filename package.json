@@ -42,7 +42,7 @@
     "@mdx-js/mdx": "^1.6.11",
     "@mdx-js/react": "^1.6.11",
     "@octokit/graphql": "^4.5.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bluebird": "^3.7.2",
     "classnames": "^2.2.6",
     "codecov": "^3.7.0",
